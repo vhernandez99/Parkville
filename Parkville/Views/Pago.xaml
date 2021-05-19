@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkville.Views.Pago">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,Auto,0.4*,Auto,0.6*" BackgroundColor="#BF0000">
+            <Label Text="Pagar mi reserva" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontSize="Title"></Label>
+            <Image Grid.Row="0" Source="backarrowicon" WidthRequest="30" HeightRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Image>
+            <Label Grid.Row="1" Text="Realizar transferencia/deposito a esta cuenta y enviar comprobante dandole click al boton verde" Margin="20" TextColor="White" FontSize="Medium"></Label>
+            <Frame Margin="20" Grid.Row="2" Padding="10" CornerRadius="10" >
+                <Grid Grid.Row="1" RowDefinitions="0.25*,0.25*,0.25*,0.25*,0.25*,0.25*" BackgroundColor="White">
+                    <Label Grid.Row="0" Text="Banco" TextColor="Black"/>
+                    <Label Grid.Row="1 " Text="Santander" TextColor="Black"/>
+                    <Label Grid.Row="2 " Text="Numero de tarjeta" TextColor="Black"/>
+                    <Label Grid.Row="3" Text="4152-3135-2932-2843" TextColor="Black"/>
+                    <Label Grid.Row="4" Text="Nombre" TextColor="Black"/>
+                    <Label Grid.Row="5" Text="Jaime De Leon" TextColor="Black"/>
+                </Grid>
+            </Frame>
+            <Button Grid.Row="3" Text="Enviar comprobante de pago" Margin="20" CornerRadius="10" BackgroundColor="#00D620"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

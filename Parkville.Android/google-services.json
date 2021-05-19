@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124717601038",
+    "project_id": "parkville-3d299",
+    "storage_bucket": "parkville-3d299.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124717601038:android:6f1284b4e1d11ecdffc75f",
+        "android_client_info": {
+          "package_name": "com.vhernandezApps.parkville"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124717601038-dp2tnpa9hnmm2apshqtld88lbibvfotd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPPNeJUH_uNKJrgpMSQRztpDHV1RHeOeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124717601038-dp2tnpa9hnmm2apshqtld88lbibvfotd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

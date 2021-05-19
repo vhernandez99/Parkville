@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkville.Views.HomeTabbed"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:View="clr-namespace:Parkville.Views"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            
+            BarBackground="whitesmoke"
+            BarTextColor="Black"
+            SelectedTabColor="#BF0000"
+            UnselectedTabColor="Gray"
+            BarBackgroundColor="WhiteSmoke"
+            
+            
+            >
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <NavigationPage IconImageSource="claqueta" Title="Peliculas" BarTextColor="Gray">
+            <x:Arguments>
+                <View:HomePage>
+                </View:HomePage>
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+    <NavigationPage IconImageSource="maps" Title="Ubicacion" >
+        <x:Arguments>
+            <View:Ubicacion>
+            </View:Ubicacion>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage IconImageSource="usuario" Title="Perfil" >
+        <x:Arguments>
+            <View:Perfil>
+            </View:Perfil>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

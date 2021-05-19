@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:Parkville.Renderers"
+             xmlns:vm="clr-namespace:Parkville.ViewModels"
+             mc:Ignorable="d"
+             x:Class="Parkville.Views.LoginPage"
+             BackgroundImageSource="fondorojo">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*,0.75*,0.75*,*,*" Margin="10" RowSpacing="15">
+
+
+            <Image Grid.Row="0" Source="backarrowicon.png" HorizontalOptions="Start"  Aspect="AspectFit" VerticalOptions="Start">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToSignupPage }"/>
+                </Image.GestureRecognizers>
+            </Image>
+            
+            
+            
+            <Frame Grid.Row="2" Padding="0" BackgroundColor="WhiteSmoke" >
+                <StackLayout Padding="5" Spacing="0">
+                    <Label Grid.Row="2" Text="Correo electronico" TextColor="Black" FontAttributes="Bold" FontSize="Small" HorizontalOptions="CenterAndExpand"></Label>
+                    <renderers:BorderlessEntry Grid.Row="3" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Margin="-3,-7,0,0"
+                                     Text="{Binding Email}"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" Padding="0" BackgroundColor="WhiteSmoke" >
+                <StackLayout Padding="5" Spacing="0">
+                    <Label Grid.Row="2" Text="Contraseña" TextColor="Black" FontAttributes="Bold" FontSize="Small" HorizontalOptions="CenterAndExpand"/>
+                    <renderers:BorderlessEntry Grid.Row="3" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" HorizontalTextAlignment="Center" IsPassword="True" 
+                                               Margin="-3,-7,0,0"
+                                     Text="{Binding Password}"/>
+                </StackLayout>
+            </Frame>
+
+            <Button Grid.Row="4" Text="Iniciar sesion" Margin="0,-20,0,0" Command="{Binding LoginCommand}" WidthRequest="250" HeightRequest="40" IsEnabled="{Binding ButtonNotBusy }" 
+                    HorizontalOptions="CenterAndExpand" BorderWidth="50" BackgroundColor="#5DBF4E" VerticalOptions="Center"/>
+
+
+
+
+
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

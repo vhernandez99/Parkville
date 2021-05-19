@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="Parkville.Views.MyReservations"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BackgroundColor="#BF0000"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,Auto" >
+            <Image Source="backarrowicon" WidthRequest="30" HeightRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10" Grid.Row="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            <Label Grid.Row="0" Text="Mis reservaciones" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+            <CollectionView x:Name="CvReservations"
+                            SelectionMode="Single"
+                            SelectionChanged="CvReservations_SelectionChanged" Grid.Row="1"
+                            Margin="10">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White"
+                               Margin="0,20,0,0"
+                               HasShadow="False">
+                        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" ColumnDefinitions="0.7*,0.3*">
+                            <Label Text="Cliente"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       Grid.Row="0"
+                                       Grid.Column="0" />
+                            <Label TextColor="Black"
+                                       Grid.Row="0"
+                                       Grid.Column="1" 
+                                       Text="{Binding CustomerName}"/>
+                            <Label Text="Pelicula"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       Grid.Row="1"
+                                       Grid.Column="0" />
+
+                            <Label TextColor="Black"
+                                       Grid.Row="1"
+                                       Grid.Column="1" 
+                                       Text="{Binding MovieName }"/>
+
+                            <Label Text="Fecha de funcion"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       Grid.Row="2"
+                                       Grid.Column="0" />
+                            <Label TextColor="Black"
+                                       Grid.Row="2"
+                                       Grid.Column="1" 
+                                       Text="{Binding PlayingDate, StringFormat='{0:dd/MM/yy}'}"/>
+                            <Label Text="Hora de funcion"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       Grid.Row="3"
+                                       Grid.Column="0" />
+                            <Label TextColor="Black"
+                                       Grid.Row="3"
+                                       Grid.Column="1" 
+                                       Text="{Binding PlayingTime, StringFormat='{0:h:mm tt}'}" />
+                            <Label Text="Precio"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       Grid.Row="4"
+                                       Grid.Column="0" />
+                            <Label TextColor="Black"
+                                       Grid.Row="4"
+                                       Grid.Column="1" 
+                                       Text="{Binding Price }"/>
+
+                            <Label Text="Pagado"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       Grid.Row="5"
+                                       Grid.Column="0" />
+                                <Label TextColor="Black"
+                                       Grid.Row="5"
+                                       Grid.Column="1" 
+                                       Text="{Binding IsPaid }"/>
+                                <Label Text="Fecha de reservacion"
+                                       TextColor="Black"
+                                       FontSize="Small"
+                                       Grid.Row="6"
+                                       Grid.Column="0" />
+                            <Label Grid.Row="6"
+                                       Grid.Column="1" TextColor="Black">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                            <Span Text="{Binding ReservationTime, StringFormat='{0:dd/MM/yy}'}"/>
+                                        </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Grid ColumnDefinitions="0.5*,0.5*" RowDefinitions="Auto" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Button Grid.Row="0" Grid.Column="0" Text="Pagar mi reserva" x:Name="Pagar" Clicked="Pagar_Clicked" Background="#00D620"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Generar QR" x:Name="QR" Background="#00D620" TextColor="White" 
+                                           FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
