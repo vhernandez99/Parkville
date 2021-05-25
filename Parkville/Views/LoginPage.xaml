@@ -20,13 +20,17 @@
                     <TapGestureRecognizer Command="{Binding GoToSignupPage }"/>
                 </Image.GestureRecognizers>
             </Image>
-            
-            
-            
+
+            <Image Grid.Row="1" Source="Logo.png" HorizontalOptions="CenterAndExpand"  Aspect="AspectFit" VerticalOptions="CenterAndExpand"/>
+
+
+
+
+
             <Frame Grid.Row="2" Padding="0" BackgroundColor="WhiteSmoke" >
                 <StackLayout Padding="5" Spacing="0">
                     <Label Grid.Row="2" Text="Correo electronico" TextColor="Black" FontAttributes="Bold" FontSize="Small" HorizontalOptions="CenterAndExpand"></Label>
-                    <renderers:BorderlessEntry Grid.Row="3" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Margin="-3,-7,0,0"
+                    <renderers:BorderlessEntry Grid.Row="3" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Margin="-3,-12,0,0"
                                      Text="{Binding Email}"/>
 
                 </StackLayout>
