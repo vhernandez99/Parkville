@@ -31,7 +31,7 @@
                             <Grid RowDefinitions="Auto" >
                                 <MediaElement x:Name="videoparkville" VerticalOptions="StartAndExpand" WidthRequest="200" HeightRequest="250" AutoPlay="True" 
                                                       Source="ms-appx:///parkvilleVideo.mp4"  
-                                                      HorizontalOptions="FillAndExpand" Margin="0" ShowsPlaybackControls="True" IsLooping="True">
+                                                      HorizontalOptions="FillAndExpand" Margin="0" ShowsPlaybackControls="False" IsLooping="False">
                                 </MediaElement>
                             </Grid>
                             <StackLayout>

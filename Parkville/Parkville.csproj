@@ -13,6 +13,47 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="App.xaml.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Models\BannerImage.cs" />
+    <Compile Include="Models\FindMovie.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieDetail.cs" />
+    <Compile Include="Models\Register.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Token.cs" />
+    <Compile Include="Models\UserReservations.cs" />
+    <Compile Include="Renderers\BorderlessEntry.cs" />
+    <Compile Include="Renderers\BorderlessPicker.cs" />
+    <Compile Include="Services\ApiService.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\UIViewModel.cs" />
+    <Compile Include="Views\ContactPage.xaml.cs" />
+    <Compile Include="Views\HomePage.xaml.cs" />
+    <Compile Include="Views\HomeTabbed.xaml.cs" />
+    <Compile Include="Views\LoginPage.xaml.cs" />
+    <Compile Include="Views\MovieDetailPage.xaml.cs" />
+    <Compile Include="Views\MyReservations.xaml.cs" />
+    <Compile Include="Views\Nosotros.xaml.cs" />
+    <Compile Include="Views\Pago.xaml.cs" />
+    <Compile Include="Views\PaymentView.xaml.cs" />
+    <Compile Include="Views\Perfil.xaml.cs" />
+    <Compile Include="Views\PoliticasPage.xaml.cs" />
+    <Compile Include="Views\PreguntasFrecuentesPage.xaml.cs" />
+    <Compile Include="Views\ReservacionQR.xaml.cs" />
+    <Compile Include="Views\ReservationPage.xaml.cs" />
+    <Compile Include="Views\SearchMoviesPage.xaml.cs" />
+    <Compile Include="Views\SignupPage.xaml.cs" />
+    <Compile Include="Views\TerminosPage.xaml.cs" />
+    <Compile Include="Views\Ubicacion.xaml.cs" />
+    <Compile Include="Views\VideoPlayerPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CardsView" Version="2.7.5" />
     <PackageReference Include="Epoch.Unix.TimeStamp" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
