@@ -19,11 +19,9 @@ namespace Parkville.Views
             InitializeComponent();
             Playvideo(videourl);
         }
-
         private async void Playvideo(string videourl)
         {
             var youtube = new YoutubeClient();
-
             var streamManifest = await youtube.Videos.Streams.GetManifestAsync(videourl);
             var streamInfo = streamManifest.GetMuxed().WithHighestVideoQuality();
 
@@ -35,7 +33,6 @@ namespace Parkville.Views
                 MediaElementVideo.Source = streamInfo.Url;
             }
         }
-
         private void ImgBack_Tapped(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();

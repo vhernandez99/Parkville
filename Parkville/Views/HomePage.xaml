@@ -10,10 +10,13 @@
              xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView" 
              xmlns:controls="clr-namespace:PanCardView.Controls;assembly=PanCardView"
              xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView" 
-             xmlns:forms1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms">
+             xmlns:forms1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             xmlns:vm="clr-namespace:Parkville.ViewModels">
+    
     <ContentPage.Content>
+
         <Grid RowDefinitions="Auto, Auto, Auto"   >
-            <Grid RowDefinitions="Auto,Auto" Grid.Row="0">
+            <Grid RowDefinitions="Auto,Auto" Grid.Row="0" Margin="-10">
                 <!--<Frame Padding="0" Grid.Row="0" BackgroundColor="#BF0000">
                     <Label Text="Parkville Autocinema" FontSize="Medium" TextColor="White" HorizontalTextAlignment="Center" FontFamily="Lobster-Regular"/>
                 </Frame>-->
@@ -23,54 +26,18 @@
                 <!--<Frame Padding="0" BackgroundColor="#BF0000" Grid.Row="0" Margin="-10">
                     <Label FontSize="Medium" Text="Parkville Autocinema" HorizontalTextAlignment="Center" TextColor="White"></Label>
                 </Frame>-->
+                <Grid RowDefinitions="Auto"  Grid.Row="0">
+                    <Frame Padding="0" BackgroundColor="Transparent" Margin="0,0,0,0">
+                        <MediaElement x:Name="videoparkville" VerticalOptions="StartAndExpand" WidthRequest="200" HeightRequest="250" AutoPlay="True" 
+                                                      Source="ms-appx:///parkvilleVideo.mp4" 
+                                                      HorizontalOptions="FillAndExpand" Margin="0" ShowsPlaybackControls="True" IsLooping="False">
+                        </MediaElement>
 
-                <cards:CarouselView Grid.Row="1" x:Name="bannerview" Margin="-10" Padding="0">
+                    </Frame>
+                    
+                </Grid>
 
-                    <cards:CarouselView.ItemsSource >
-                        <x:Array Type="{x:Type View}">
-                            <Grid RowDefinitions="Auto" >
-                                <MediaElement x:Name="videoparkville" VerticalOptions="StartAndExpand" WidthRequest="200" HeightRequest="250" AutoPlay="True" 
-                                                      Source="ms-appx:///parkvilleVideo.mp4"  
-                                                      HorizontalOptions="FillAndExpand" Margin="0" ShowsPlaybackControls="False" IsLooping="False">
-                                </MediaElement>
-                            </Grid>
-                            <StackLayout>
-                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
-                                    <Image x:Name="Image1" Source="{Binding ImageSource1}" Aspect="Fill" 
-                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
-                                </Frame>
-                            </StackLayout>
-                            <StackLayout>
-                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
-                                    <Image x:Name="Image2" Source="{Binding ImageSource2}" Aspect="Fill" 
-                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
-                                </Frame>
-                            </StackLayout>
-                            <StackLayout>
-                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
-                                    <Image x:Name="Image3" Source="{Binding ImageSource3}" Aspect="Fill" 
-                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
-                                </Frame>
-                            </StackLayout>
-                            <StackLayout>
-                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
-                                    <Image x:Name="Image4" Source="{Binding ImageSource4}" Aspect="Fill" 
-                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
-                                </Frame>
-                            </StackLayout>
-                            <StackLayout>
-                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
-                                    <Image x:Name="Image5" Source="{Binding ImageSource5}" Aspect="Fill" 
-                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
-                                </Frame>
-                            </StackLayout>
-                        </x:Array>
-                    </cards:CarouselView.ItemsSource>
-                    <controls:LeftArrowControl ToFadeDuration="1500"/>
-                    <controls:RightArrowControl ToFadeDuration="1500"/>
-                    <controls:CircleFrame/>
-                    <controls:IndicatorsControl/>
-                </cards:CarouselView>
+
             </Grid>
             <Grid Grid.Row="2" RowDefinitions="Auto,Auto">
                 <!--<Frame Padding="0" BackgroundColor="Transparent" Grid.Row="0" >
@@ -90,7 +57,7 @@
                         <CollectionView.ItemTemplate >
                             <DataTemplate >
                                 <StackLayout Margin="10">
-                                    <Frame Padding="0" WidthRequest="200" HeightRequest="200" Margin="10">
+                                    <Frame Padding="0" WidthRequest="200" HeightRequest="200" Margin="10" CornerRadius="10" >
                                         <Image Aspect="Fill" Source="{Binding FullImageUrl}" />
                                     </Frame>
                                 </StackLayout>
@@ -98,7 +65,7 @@
                         </CollectionView.ItemTemplate>
                     </CollectionView>
                 </RefreshView>
-                
+
             </Grid>
         </Grid>
     </ContentPage.Content>

@@ -21,12 +21,14 @@ namespace Parkville.Views
         public HomePage()
         {
             InitializeComponent();
+            
             hpvm = new HomePageViewModel();
             this.BindingContext = hpvm;
             //LblUserName.Text= Preferences.Get("userName", string.Empty);
         }
         private void CvMovies_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            videoparkville.Stop();
             var currentSelection=e.CurrentSelection.FirstOrDefault() as Movie;
             if (currentSelection == null) return;
             Navigation.PushModalAsync(new MovieDetailPage(currentSelection.Id));

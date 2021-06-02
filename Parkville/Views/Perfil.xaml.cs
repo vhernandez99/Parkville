@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parkville.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,12 @@ namespace Parkville.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Perfil : ContentPage
     {
+        PerfilViewModel pVM;
         public Perfil()
         {
             InitializeComponent();
+            pVM = new PerfilViewModel();
+            this.BindingContext = pVM;
             var userName= Preferences.Get("userName", string.Empty);
             title.Text = "Bienvenido    " + userName;
         }
@@ -64,8 +68,7 @@ namespace Parkville.Views
                 {
                     return;
                 }
-            });
-                        
+            });        
         }
     }
 }

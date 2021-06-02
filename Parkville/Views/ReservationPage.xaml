@@ -8,28 +8,23 @@
              mc:Ignorable="d"
              BackgroundColor="WhiteSmoke">
     <ContentPage.Content>
-        <StackLayout Margin="15,20,15,0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1.5*" />
-                    <ColumnDefinition Width="7*" />
-                    <ColumnDefinition Width="1.5*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="backicon.png"
-                       HorizontalOptions="Start"
-                       Grid.Column="0"
-                       Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="ImgBack" Tapped="ImgBack_Tapped" />
-                    </Image.GestureRecognizers>
-                </Image>
-                <Label Text="Reservar"
-                       TextColor="Black"
-                       VerticalOptions="Start"
-                       HorizontalOptions="Center"
-                       FontSize="Title"
-                       Grid.Column="1" />
-            </Grid>
+        
+        <StackLayout Margin="0">
+            <Frame Padding="0" BackgroundColor="#BF0000" Margin="0">
+                <Grid  Padding="0" Margin="0">
+
+                    <Image Source="backarrowicon" WidthRequest="30" HeightRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10" Grid.Row="0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Grid.Row="0" Text="Reservar" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Title" 
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </Frame>
+
+            <StackLayout Margin="20">
             <Grid Margin="0,15,0,0"
                   HeightRequest="250">
                 <Grid.RowDefinitions>
@@ -76,12 +71,11 @@
                                  Spacing="0"
                                  Grid.Row="0"
                                  Grid.Column="0">
-                        <Frame BackgroundColor="#8B93A6"
-                               BorderColor="#707070"
-                               Padding="8"
-                               CornerRadius="30">
+                        <Frame BackgroundColor="black" 
+                                           Padding="5"
+                                           CornerRadius="8">
                             <Label TextColor="White"
-                                   x:Name="LblGenre" />
+                                               x:Name="LblGenre" HorizontalTextAlignment="Start" />
                         </Frame>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
@@ -190,6 +184,7 @@
                 </StackLayout>
             </Frame>
             <Button Margin="0,30,0,0" Clicked="ImgReserve_Tapped" BackgroundColor="#BF0000" Text="Reservar"/>
+        </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

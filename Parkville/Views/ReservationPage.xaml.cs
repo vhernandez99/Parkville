@@ -73,12 +73,9 @@ namespace Parkville.Views
             });
             
         }
-
-        private void ImgBack_Tapped(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();
         }
-
-        
     }
 }

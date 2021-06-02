@@ -12,7 +12,7 @@
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid RowDefinitions="Auto,1.5*,0.4*,0.4*,0.4*,*" Margin="10" RowSpacing="15">
+        <Grid RowDefinitions="Auto,1.5*,0.35*,0.35*,0.35*,*" Margin="10" RowSpacing="15">
 
 
             <Image Grid.Row="0" Source="backarrowicon.png" HorizontalOptions="Start"  Aspect="AspectFit" VerticalOptions="Start">
@@ -22,10 +22,6 @@
             </Image>
 
             <Image Grid.Row="1" Source="Logo.png" HorizontalOptions="CenterAndExpand"  Aspect="AspectFit" VerticalOptions="CenterAndExpand"/>
-
-
-
-
 
             <Frame Grid.Row="2" Padding="0" BackgroundColor="WhiteSmoke" >
                 <StackLayout Padding="5" Spacing="0">
@@ -47,13 +43,6 @@
 
             <Button Grid.Row="4" Text="Iniciar sesion" Margin="0,-20,0,0" Command="{Binding LoginCommand}" WidthRequest="250" HeightRequest="40" IsEnabled="{Binding ButtonNotBusy }" 
                     HorizontalOptions="CenterAndExpand" BorderWidth="50" BackgroundColor="#5DBF4E" VerticalOptions="Center"/>
-
-
-
-
-
-
-
 
         </Grid>
     </ContentPage.Content>

@@ -6,11 +6,11 @@
             xmlns:View="clr-namespace:Parkville.Views"
             android:TabbedPage.ToolbarPlacement="Bottom"
             
-            BarBackground="whitesmoke"
-            BarTextColor="Black"
-            SelectedTabColor="#BF0000"
-            UnselectedTabColor="Gray"
-            BarBackgroundColor="WhiteSmoke"
+            BarBackground="#BF0000"
+            BarTextColor="WhiteSmoke"
+            SelectedTabColor="#00D620"
+            UnselectedTabColor="WhiteSmoke"
+            BarBackgroundColor="#BF0000"
             
             
             >
