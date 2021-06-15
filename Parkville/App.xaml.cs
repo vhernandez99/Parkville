@@ -22,9 +22,6 @@ namespace Parkville
                 MainPage = new SignupPage();
             }
 
-
-
-
             //MainPage = new Pago();
         }
 

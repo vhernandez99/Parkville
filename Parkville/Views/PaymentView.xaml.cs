@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms.OpenWhatsApp;
+﻿using Plugin.Clipboard;
+using System;
 using Xamarin.Forms;
+using Xamarin.Forms.OpenWhatsApp;
 using Xamarin.Forms.Xaml;
 
 namespace Parkville.Views
@@ -21,7 +18,7 @@ namespace Parkville.Views
         {
             try
             {
-                Chat.Open("+528681309225","Comprobacion de mi pago por deposito o transferencia");
+                Chat.Open("+528681309225", "Comprobacion de mi pago por deposito o transferencia");
             }
             catch (Exception ex)
             {
@@ -32,7 +29,12 @@ namespace Parkville.Views
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
-            
+
+        }
+
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            CrossClipboard.Current.SetText(cardNum.Text);
         }
     }
 }

@@ -85,22 +85,10 @@
                                        Grid.Row="5"
                                        Grid.Column="1" 
                                        Text="{Binding IsPaid }"/>
-                                <Label Text="Fecha de reservacion"
-                                       TextColor="Black"
-                                       FontSize="Small"
-                                       Grid.Row="6"
-                                       Grid.Column="0" />
-                            <Label Grid.Row="6"
-                                       Grid.Column="1" TextColor="Black">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                            <Span Text="{Binding ReservationTime, StringFormat='{0:dd/MM/yy}'}"/>
-                                        </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
+                                
                             <Grid ColumnDefinitions="0.5*,0.5*" RowDefinitions="Auto" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
                                 <Button Grid.Row="0" Grid.Column="0" Text="Pagar mi reserva" x:Name="Pagar" Clicked="Pagar_Clicked" Background="#00D620"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="Generar QR" x:Name="QR" Background="#00D620" TextColor="White" 
+                                <Label Grid.Row="0" Grid.Column="1" Text="Generar QR" x:Name="QR" Background="#00D620" TextColor="Black" 
                                            FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                             </Grid>
                         </Grid>

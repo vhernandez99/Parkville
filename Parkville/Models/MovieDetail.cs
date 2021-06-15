@@ -12,7 +12,15 @@ namespace Parkville.Models
         public string Language { get; set; }
         public string Duration { get; set; }
         public DateTime PlayingDate { get; set; }
+        public DateTime PlayingDate2 { get; set; }
+        public DateTime PlayingDate3 { get; set; }
+        public DateTime PlayingDate4 { get; set; }
+        public DateTime PlayingDate5 { get; set; }
         public DateTime PlayingTime { get; set; }
+        public DateTime PlayingTime2 { get; set; }
+        public DateTime PlayingTime3 { get; set; }
+        public DateTime PlayingTime4 { get; set; }
+        public DateTime PlayingTime5 { get; set; }
         public int TicketPrice { get; set; }
         public double Rating { get; set; }
         public string Genre { get; set; }

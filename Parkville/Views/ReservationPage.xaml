@@ -107,19 +107,16 @@
                    IsClippedToBounds="True">
                 <StackLayout Spacing="0">
                     <StackLayout BackgroundColor="#BF0000">
-                        <Label Text="Cantidad"
+                        <Label Text="Horario de funciones"
                                TextColor="White"
                                Padding="8" />
                     </StackLayout>
                     <StackLayout BackgroundColor="White">
-                        <renderers:BorderlessPicker  Margin="10"
-                                                     Title="Choose Ticket QTY"
-                                                     TextColor="Black"
-                                                     x:Name="PickerQty"
-                                                     SelectedIndexChanged="PickerQty_SelectedIndexChanged">
+                            <renderers:BorderlessPicker  Margin="10" x:Name="pickerfunciones" Title="Seleccionar horario de pelicula" TextColor="Black">
+                                <!--SelectedIndexChanged="PickerQty_SelectedIndexChanged">
                             <renderers:BorderlessPicker.Items>
                                 <x:String>1</x:String>
-                                <!--<x:String>2</x:String>
+                                --><!--<x:String>2</x:String>
                                 <x:String>3</x:String>
                                 <x:String>4</x:String>
                                 <x:String>5</x:String>
@@ -136,9 +133,9 @@
                                 <x:String>16</x:String>
                                 <x:String>17</x:String>
                                 <x:String>18</x:String>
-                                <x:String>19</x:String>-->
-                            </renderers:BorderlessPicker.Items>
-                            <renderers:BorderlessPicker.SelectedIndex>0</renderers:BorderlessPicker.SelectedIndex>
+                                <x:String>19</x:String>--><!--
+                            </renderers:BorderlessPicker.Items>--><!--
+                            <renderers:BorderlessPicker.SelectedIndex>0</renderers:BorderlessPicker.SelectedIndex>-->
                         </renderers:BorderlessPicker>
                     </StackLayout>
                 </StackLayout>

@@ -12,5 +12,7 @@ namespace Parkville.Models
         public int MovieId { get; set; }
         public int UserId { get; set; }
         public string IsUsed { get; set; }
+        public string HorarioDePelicula { get; set; }
+
     }
 }

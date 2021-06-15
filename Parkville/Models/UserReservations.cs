@@ -11,6 +11,7 @@ namespace Parkville.Models
         public string IsPaid { get; set; }
         public string MovieName { get; set; }
         public int CustomerId { get; set; }
+        public string HorarioDePelicula { get; set; }
         public DateTime PlayingDate { get; set; }
         public DateTime PlayingTime { get; set; }
         public string CustomerName { get; set; }

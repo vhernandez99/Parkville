@@ -88,49 +88,85 @@
                                        FontSize="Body"/>
                             </StackLayout>
                         </Grid>
-                        <Label Text="Detalles:"
+                        <Label Text="Funciones:"
                                FontSize="Medium"
                                Margin="0,20,0,0"
                                TextColor="black"
                                FontAttributes="Bold"/>
                         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto">
-                            <Label Text="Fecha de funcion"
+                            <!--<Label Text="Fecha de funcion"
                                    TextColor="Black"
                                    Grid.Row="0"
                                    Grid.Column="0"
                                    FontSize="Body"
-                                   FontAttributes="Bold"/>
+                                   FontAttributes="Bold"/>-->
                             <Label x:Name="LblPlayingDate"
-                                   Text="{Binding movie.PlayingDate, StringFormat='{0:dd/MM/yy}'}" 
+                                   TextColor="Black"
+                                   Grid.Row="0"
+                                   Grid.Column="0"/>
+                            <Label x:Name="LblPlayingTime"
+                                   TextColor="black"
+                                   Grid.Row="0"
+                                   Grid.Column="1">
+                            </Label>
+                            
+                            <Label x:Name="LblPlayingDate2"
                                    TextColor="Black"
                                    Grid.Row="1"
                                    Grid.Column="0"/>
-                            <Label Text="Horario de funcion"
+                            <Label x:Name="LblPlayingTime2"
+                                   TextColor="black"
+                                   Grid.Row="1"
+                                   Grid.Column="1">
+                            </Label>
+                            <Label x:Name="LblPlayingDate3"
+                                   TextColor="Black"
+                                   Grid.Row="2"
+                                   Grid.Column="0"/>
+                            <Label x:Name="LblPlayingTime3"
+                                   TextColor="black"
+                                   Grid.Row="2"
+                                   Grid.Column="1">
+                            </Label>
+                            <Label x:Name="LblPlayingDate4"
+                                   TextColor="Black"
+                                   Grid.Row="3"
+                                   Grid.Column="0"/>
+                            <Label x:Name="LblPlayingTime4"
+                                   TextColor="black"
+                                   Grid.Row="3"
+                                   Grid.Column="1">
+                            </Label>
+                            <Label x:Name="LblPlayingDate5"
+                                   TextColor="Black"
+                                   Grid.Row="4"
+                                   Grid.Column="0"/>
+                            <Label x:Name="LblPlayingTime5"
+                                   TextColor="black"
+                                   Grid.Row="4"
+                                   Grid.Column="1">
+                            </Label>
+                            <!--<Label Text="Horario de funcion"
                                    TextColor="Black"
                                    Grid.Row="2"
                                     
                                    FontSize="Body"
-                                   FontAttributes="Bold"/>
+                                   FontAttributes="Bold"/>-->
 
-                            <Label x:Name="LblPlayingTime"
-                                   TextColor="black"
-                                   Grid.Row="3"
-                                   Grid.Column="0">
-                                  
-                            </Label>
+                            
                             <Label Text="Precio"
                                    TextColor="black"
-                                   Grid.Row="4"
+                                   Grid.Row="5"
                                    FontSize="Body"
                                    FontAttributes="Bold"/>
                             <Label x:Name="LblTicketPrice"
                                    TextColor="black"
                                    Grid.Row="5"
-                                   Grid.Column="0"/>
+                                   Grid.Column="1"/>
                         </Grid>
                         <BoxView BackgroundColor="#8B93A6"
                                  HeightRequest="1" />
-                        <Label Text="Descripcion"
+                        <Label Text="Sinopsis"
                                TextColor="black"
                                FontSize="Body"
                                FontAttributes="Bold"/>
@@ -138,7 +174,7 @@
                                TextColor="black"
                                FontSize="Body"
                                HorizontalTextAlignment="Center"/>
-                        <Button Margin="0,30,0,0" Clicked="ImgBookTicket_Tapped" BackgroundColor="#00D620" Text="Reservar">
+                        <Button Margin="0,30,0,0" Clicked="ImgBookTicket_Tapped" BackgroundColor="#00D620" Text="Comprar boleto">
                         </Button>
                     </StackLayout>
                 </Frame>
