@@ -27,7 +27,7 @@
                     <Frame BackgroundColor="White"
                                Margin="0,20,0,0"
                                HasShadow="False">
-                        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" ColumnDefinitions="0.7*,0.3*">
+                        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" ColumnDefinitions="0.5*,0.5*">
                             <Label Text="Cliente"
                                        TextColor="Black"
                                        FontSize="Small"
@@ -48,24 +48,30 @@
                                        Grid.Column="1" 
                                        Text="{Binding MovieName }"/>
 
-                            <Label Text="Fecha de funcion"
+                            <Label Text="Horario de funcion"
                                        TextColor="Black"
                                        FontSize="Small"
                                        Grid.Row="2"
                                        Grid.Column="0" />
+                            
                             <Label TextColor="Black"
                                        Grid.Row="2"
                                        Grid.Column="1" 
-                                       Text="{Binding PlayingDate, StringFormat='{0:dd/MM/yy}'}"/>
-                            <Label Text="Hora de funcion"
+                                       Text="{Binding HorarioDePelicula}"/>
+                            
+                            <!--<Label TextColor="Black"
+                                       Grid.Row="2"
+                                       Grid.Column="1" 
+                                       Text="{Binding PlayingDate, StringFormat='{0:dd/MM/yy}'}"/>-->
+                            <!--<Label Text="Hora de funcion"
                                        TextColor="Black"
                                        FontSize="Small"
                                        Grid.Row="3"
-                                       Grid.Column="0" />
-                            <Label TextColor="Black"
+                                       Grid.Column="0" />-->
+                            <!--<Label TextColor="Black"
                                        Grid.Row="3"
                                        Grid.Column="1" 
-                                       Text="{Binding PlayingTime, StringFormat='{0:h:mm tt}'}" />
+                                       Text="{Binding PlayingTime, StringFormat='{0:h:mm tt}'}" />-->
                             <Label Text="Precio"
                                        TextColor="Black"
                                        FontSize="Small"
