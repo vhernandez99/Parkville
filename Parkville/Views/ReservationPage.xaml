@@ -19,7 +19,7 @@
                         </Image.GestureRecognizers>
                     </Image>
 
-                    <Label Grid.Row="0" Text="Reservar" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Title" 
+                    <Label Grid.Row="0" Text="Comprar boleto" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Title" 
                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
                 </Grid>
             </Frame>
@@ -107,12 +107,12 @@
                    IsClippedToBounds="True">
                 <StackLayout Spacing="0">
                     <StackLayout BackgroundColor="#BF0000">
-                        <Label Text="Horario de funciones"
+                            <Label Text="Seleccionar horario de pelicula"
                                TextColor="White"
                                Padding="8" />
                     </StackLayout>
-                    <StackLayout BackgroundColor="White">
-                            <renderers:BorderlessPicker  Margin="10" x:Name="pickerfunciones" Title="Seleccionar horario de pelicula" TextColor="Black">
+                        <StackLayout BackgroundColor="White">
+                            <renderers:BorderlessPicker   Margin="10" x:Name="pickerfunciones" Title="Funciones disponibles" TextColor="Black">
                                 <!--SelectedIndexChanged="PickerQty_SelectedIndexChanged">
                             <renderers:BorderlessPicker.Items>
                                 <x:String>1</x:String>
@@ -180,7 +180,7 @@
                     </StackLayout>
                 </StackLayout>
             </Frame>
-            <Button Margin="0,30,0,0" Clicked="ImgReserve_Tapped" BackgroundColor="#BF0000" Text="Reservar"/>
+            <Button Margin="0,30,0,0" Clicked="ImgReserve_Tapped" BackgroundColor="#BF0000" Text="Comprar"/>
         </StackLayout>
         </StackLayout>
     </ContentPage.Content>

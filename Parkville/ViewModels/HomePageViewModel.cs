@@ -1,25 +1,20 @@
 ﻿using Parkville.Models;
 using Parkville.Services;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Parkville.ViewModels
 {
     public class HomePageViewModel : BaseViewModel
     {
-        
+
         public ObservableCollection<Movie> MoviesCollection { get; set; }
         public Command RefreshCommand { get; set; }
         public Command MoviesCommand { get; set; }
 
         private int PageNumber = 0;
-
-        bool _isRefreshing;
+        private bool _isRefreshing;
         public bool IsRefreshing
         {
             set
@@ -27,23 +22,22 @@ namespace Parkville.ViewModels
                 _isRefreshing = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _isRefreshing;
-            }
+            get => _isRefreshing;
         }
         public HomePageViewModel()
         {
             MoviesCollection = new ObservableCollection<Movie>();
             BannerImagesCollection = new ObservableCollection<BannerImage>();
-            AsignImagesResource();
             RefreshCommand = new Command(ExecuteRefreshCommand);
             GetMovies();
-            
+            GetBannerImagesSource();
+
+
         }
 
         public ObservableCollection<BannerImage> BannerImagesCollection { get; set; }
-        string _ImageSource1;
+
+        private string _ImageSource1;
 
 
         public string ImageSource1
@@ -53,13 +47,10 @@ namespace Parkville.ViewModels
                 _ImageSource1 = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _ImageSource1;
-            }
+            get => _ImageSource1;
         }
 
-        string _ImageSource2;
+        private string _ImageSource2;
         public string ImageSource2
         {
             set
@@ -67,13 +58,10 @@ namespace Parkville.ViewModels
                 _ImageSource2 = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _ImageSource2;
-            }
+            get => _ImageSource2;
         }
 
-        string _ImageSource3;
+        private string _ImageSource3;
         public string ImageSource3
         {
             set
@@ -81,13 +69,10 @@ namespace Parkville.ViewModels
                 _ImageSource3 = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _ImageSource3;
-            }
+            get => _ImageSource3;
         }
 
-        string _ImageSource4;
+        private string _ImageSource4;
         public string ImageSource4
         {
             set
@@ -95,13 +80,10 @@ namespace Parkville.ViewModels
                 _ImageSource4 = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _ImageSource4;
-            }
+            get => _ImageSource4;
         }
 
-        string _ImageSource5;
+        private string _ImageSource5;
         public string ImageSource5
         {
             set
@@ -109,29 +91,84 @@ namespace Parkville.ViewModels
                 _ImageSource5 = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _ImageSource5;
-            }
+            get => _ImageSource5;
         }
-        public async Task<ObservableCollection<BannerImage>> GetBannerImagesSource()
+
+        private string _ImageSource6;
+        public string ImageSource6
         {
-            var ImagesBanner = await ApiService.GetAllBannerImages();
-            foreach (var ImageBanner in ImagesBanner)
+            set
+            {
+                _ImageSource6 = value;
+                OnPropertyChanged();
+            }
+            get => _ImageSource6;
+        }
+
+        private string _ImageSource7;
+        public string ImageSource7
+        {
+            set
+            {
+                _ImageSource7 = value;
+                OnPropertyChanged();
+            }
+            get => _ImageSource7;
+        }
+
+        private string _ImageSource8;
+        public string ImageSource8
+        {
+            set
+            {
+                _ImageSource8 = value;
+                OnPropertyChanged();
+            }
+            get => _ImageSource8;
+        }
+
+        private string _ImageSource9;
+        public string ImageSource9
+        {
+            set
+            {
+                _ImageSource9 = value;
+                OnPropertyChanged();
+            }
+            get => _ImageSource9;
+        }
+
+        private string _ImageSource10;
+        public string ImageSource10
+        {
+            set
+            {
+                _ImageSource10 = value;
+                OnPropertyChanged();
+            }
+            get => _ImageSource10;
+        }
+
+
+        public async void GetBannerImagesSource()
+        {
+            List<BannerImage> ImagesBanner = await ApiService.GetAllBannerImages();
+            foreach (BannerImage ImageBanner in ImagesBanner)
             {
                 BannerImagesCollection.Add(ImageBanner);
             }
-            return BannerImagesCollection;
+            ImageSource1 = BannerImagesCollection[0].FullImageUrl;
+            ImageSource2 = BannerImagesCollection[1].FullImageUrl;
+            ImageSource3 = BannerImagesCollection[2].FullImageUrl;
+            ImageSource4 = BannerImagesCollection[3].FullImageUrl;
+            ImageSource5 = BannerImagesCollection[4].FullImageUrl;
+            ImageSource6 = BannerImagesCollection[5].FullImageUrl;
+            ImageSource7 = BannerImagesCollection[6].FullImageUrl;
+            ImageSource8 = BannerImagesCollection[7].FullImageUrl;
+            ImageSource9 = BannerImagesCollection[8].FullImageUrl;
+            ImageSource10 = BannerImagesCollection[9].FullImageUrl;
         }
-        private async void AsignImagesResource()
-        {
-            var source = await GetBannerImagesSource();
-            ImageSource1 = source[0].FullImageUrl;
-            ImageSource2 = source[1].FullImageUrl;
-            ImageSource3 = source[2].FullImageUrl;
-            ImageSource4 = source[3].FullImageUrl;
-            ImageSource5 = source[4].FullImageUrl;
-        }
+
         private void ExecuteRefreshCommand(object obj)
         {
             RefreshMovies();
@@ -141,8 +178,8 @@ namespace Parkville.ViewModels
         public async void GetMovies()
         {
             PageNumber++;
-            var movies = await ApiService.GetAllMovies(PageNumber, 5);
-            foreach (var movie in movies)
+            List<Movie> movies = await ApiService.GetAllMovies(PageNumber, 5);
+            foreach (Movie movie in movies)
             {
                 MoviesCollection.Add(movie);
             }
@@ -151,14 +188,14 @@ namespace Parkville.ViewModels
         {
             PageNumber = 0;
             PageNumber++;
-            var movies = await ApiService.GetAllMovies(PageNumber,5);
+            List<Movie> movies = await ApiService.GetAllMovies(PageNumber, 5);
             MoviesCollection.Clear();
-            foreach(var movie in movies)
+            foreach (Movie movie in movies)
             {
                 MoviesCollection.Add(movie);
             }
             IsRefreshing = false;
         }
-        
+
     }
 }

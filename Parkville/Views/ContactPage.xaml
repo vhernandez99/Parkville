@@ -34,8 +34,11 @@
                    Text="Para mayor informacion contactanos!"
                    TextColor="White"
                    FontSize="Body" HorizontalTextAlignment="Center" />
-            <Button x:Name="BtnCall"
-                    
+            <Label Margin="20"
+                   Text="Whatsapp business"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+            <Button x:Name="BtnCall" 
                     Text="Llamar 8681309225"
                     Margin="10"
                     BackgroundColor="#00D620"
@@ -43,6 +46,30 @@
                     FontSize="Medium"
                     CornerRadius="25" 
                     Clicked="BtnCall_Clicked"/>
+            <Label Margin="20"
+                   Text="Oficina"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+            <Button x:Name="BtnCall2" 
+                    Text="Llamar 8681335196"
+                    Margin="10"
+                    BackgroundColor="#00D620"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnCall2_Clicked"/>
+            <Label Margin="20"
+                   Text="Quejas o sugerencias"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+            <Button x:Name="BtnCall3" 
+                    Text="Llamar 8682270834"
+                    Margin="10"
+                    BackgroundColor="#00D620"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnCall3_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

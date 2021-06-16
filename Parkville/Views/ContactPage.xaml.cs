@@ -26,5 +26,15 @@ namespace Parkville.Views
         {
             PhoneDialer.Open("8681309225");
         }
+
+        private void BtnCall2_Clicked(object sender, EventArgs e)
+        {
+            PhoneDialer.Open("8681335196");
+        }
+
+        private void BtnCall3_Clicked(object sender, EventArgs e)
+        {
+            PhoneDialer.Open("8682270834");
+        }
     }
 }

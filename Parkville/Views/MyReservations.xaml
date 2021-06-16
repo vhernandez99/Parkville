@@ -14,7 +14,7 @@
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Image.GestureRecognizers>
                 </Image>
-            <Label Grid.Row="0" Text="Mis reservaciones" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+            <Label Grid.Row="0" Text="Mis boletos" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
             <CollectionView x:Name="CvReservations"
                             SelectionMode="Single"
                             SelectionChanged="CvReservations_SelectionChanged" Grid.Row="1"
@@ -94,7 +94,7 @@
                                 
                             <Grid ColumnDefinitions="0.5*,0.5*" RowDefinitions="Auto" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
                                 <Button Grid.Row="0" Grid.Column="0" Text="Pagar mi reserva" x:Name="Pagar" Clicked="Pagar_Clicked" Background="#00D620"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="Generar QR" x:Name="QR" Background="#00D620" TextColor="Black" 
+                                <Label Grid.Row="0" Grid.Column="1" Text="Generar QR" x:Name="QR" Background="#00D620" TextColor="White" 
                                            FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                             </Grid>
                         </Grid>

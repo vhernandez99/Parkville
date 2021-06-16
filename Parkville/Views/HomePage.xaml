@@ -62,6 +62,36 @@
                                    WidthRequest="200" HeightRequest="250" Margin="0"></Image>
                                 </Frame>
                             </StackLayout>
+                            <StackLayout>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource6}" Aspect="Fill" 
+                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource7}" Aspect="Fill" 
+                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource8}" Aspect="Fill" 
+                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource9}" Aspect="Fill" 
+                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource10}" Aspect="Fill" 
+                                   WidthRequest="200" HeightRequest="250" Margin="0"></Image>
+                                </Frame>
+                            </StackLayout>
                         </x:Array>
                     </cards:CarouselView.ItemsSource>
                     <controls:LeftArrowControl ToFadeDuration="1500"/>

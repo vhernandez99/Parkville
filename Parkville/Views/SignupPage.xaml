@@ -38,7 +38,7 @@
                 </Frame>
                 <Frame Grid.Row="3" BackgroundColor="WhiteSmoke" Padding="0">
                     <StackLayout Padding="5" Spacing="0">
-                        <Label Text="Correo electronico" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
+                        <Label Text="Nombre de usuario" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
                         <Renderers:BorderlessEntry TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" Margin="-3,-7,0,0"
                                      Text="{Binding Email}"/>
                     </StackLayout>

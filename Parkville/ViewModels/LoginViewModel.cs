@@ -1,8 +1,6 @@
 ﻿using Parkville.Services;
 using Parkville.Views;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -21,10 +19,7 @@ namespace Parkville.ViewModels
                 _Username = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _Username;
-            }
+            get => _Username;
         }
 
         private string _Password;
@@ -35,10 +30,7 @@ namespace Parkville.ViewModels
                 _Password = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _Password;
-            }
+            get => _Password;
         }
         private string _ConfirmPassword;
         public string ConfirmPassword
@@ -48,10 +40,7 @@ namespace Parkville.ViewModels
                 _ConfirmPassword = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _ConfirmPassword;
-            }
+            get => _ConfirmPassword;
         }
 
 
@@ -64,10 +53,7 @@ namespace Parkville.ViewModels
                 _Email = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _Email;
-            }
+            get => _Email;
         }
         private string _Phonenumber;
         public string Phonenumber
@@ -77,10 +63,7 @@ namespace Parkville.ViewModels
                 _Phonenumber = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _Phonenumber;
-            }
+            get => _Phonenumber;
         }
 
         private bool _IsBusy;
@@ -91,13 +74,10 @@ namespace Parkville.ViewModels
                 _IsBusy = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _IsBusy;
-            }
+            get => _IsBusy;
         }
 
-        private bool _ButtonNotbusy =true;
+        private bool _ButtonNotbusy = true;
         public bool ButtonNotBusy
         {
             set
@@ -105,10 +85,7 @@ namespace Parkville.ViewModels
                 _ButtonNotbusy = value;
                 OnPropertyChanged();
             }
-            get
-            {
-                return _ButtonNotbusy;
-            }
+            get => _ButtonNotbusy;
         }
 
         public Command SignupCommand { get; set; }
@@ -128,7 +105,10 @@ namespace Parkville.ViewModels
         {
             ButtonNotBusy = false;
             if (IsBusy)
+            {
                 return;
+            }
+
             if (SignUpVerification())
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Favor de verificar su informacion", "Aceptar");
@@ -137,9 +117,9 @@ namespace Parkville.ViewModels
             }
             try
             {
-                var tokenFirebase = Preferences.Get("TokenFirebase", string.Empty);
+                string tokenFirebase = Preferences.Get("TokenFirebase", string.Empty);
                 IsBusy = true;
-                var response = await ApiService.RegisterUser(Username, Email, Password, Phonenumber, tokenFirebase);
+                bool response = await ApiService.RegisterUser(Username, Email, Password, Phonenumber, tokenFirebase);
                 IsBusy = false;
 
                 if (response)
@@ -169,13 +149,13 @@ namespace Parkville.ViewModels
         }
         public bool SignUpVerification()
         {
-            var verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password) || string.IsNullOrEmpty(_ConfirmPassword) || _ConfirmPassword != _Password||
-                Phonenumber.Length<10);
+            bool verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password) || string.IsNullOrEmpty(_ConfirmPassword) || _ConfirmPassword != _Password ||
+                Phonenumber.Length < 10);
             return verification;
         }
         public bool LoginVerification()
         {
-            var verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password));
+            bool verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password));
             return verification;
         }
 
@@ -184,7 +164,10 @@ namespace Parkville.ViewModels
 
             ButtonNotBusy = false;
             if (IsBusy)
+            {
                 return;
+            }
+
             if (LoginVerification())
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Favor de verificar su informacion", "Aceptar");
@@ -193,7 +176,7 @@ namespace Parkville.ViewModels
             }
             try
             {
-                var response = await ApiService.Login(Email, Password);
+                bool response = await ApiService.Login(Email, Password);
                 Preferences.Set("email", Email);
                 Preferences.Set("password", Password);
                 if (response)
@@ -208,7 +191,7 @@ namespace Parkville.ViewModels
                     ButtonNotBusy = true;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
             }
@@ -217,14 +200,14 @@ namespace Parkville.ViewModels
                 IsBusy = false;
                 ButtonNotBusy = true;
             }
-            
+
         }
 
 
 
 
 
-        
-        
+
+
     }
 }

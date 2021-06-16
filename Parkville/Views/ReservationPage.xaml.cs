@@ -50,7 +50,7 @@ namespace Parkville.Views
                 funcionesList.Add(movie.PlayingDate5.ToString("dd/MM/yyyy") + " " + movie.PlayingTime5.ToString("hh:mm tt"));
             }
             pickerfunciones.ItemsSource = funcionesList;
-            
+            pickerfunciones.SelectedIndex = 0;
         }
 
         //private void PickerQty_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,10 +63,15 @@ namespace Parkville.Views
 
         private void ImgReserve_Tapped(object sender, EventArgs e)
         {
-
+            
             Device.BeginInvokeOnMainThread(async () =>
             {
-                bool result = await DisplayAlert("Alerta", "Realmente desea hacer una reservacion?", "Si", "No");
+                if(pickerfunciones.SelectedIndex == -1)
+                {
+                    await DisplayAlert("Alerta", "Favor de seleccionar una funcion", "Ok");
+                    return;
+                }
+                bool result = await DisplayAlert("Alerta", "Realmente desea comprar un boleto?", "Si", "No");
                 if (result)
                 {
                     Reservation reservation = new Reservation
