@@ -50,9 +50,6 @@
     <EmbeddedResource Update="Views\Nosotros.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pago.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\PaymentView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
