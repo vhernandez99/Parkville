@@ -108,10 +108,14 @@ namespace Parkville.ViewModels
             {
                 return;
             }
+            if(Password!= ConfirmPassword)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Las contraseñas no coinciden", "Aceptar");
+            }
 
             if (SignUpVerification())
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Favor de verificar su informacion", "Aceptar");
+                await Application.Current.MainPage.DisplayAlert("Error", "Favor de rellenar todos los campos", "Aceptar");
                 ButtonNotBusy = true;
                 return;
             }
@@ -124,7 +128,7 @@ namespace Parkville.ViewModels
 
                 if (response)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Alerta", "Cuenta creada correctamente", "Aceptar");
+                    await Application.Current.MainPage.DisplayAlert("", "Se ha registrado exitosamente", "Aceptar");
                     await Application.Current.MainPage.Navigation.PushModalAsync(new LoginPage());
                     IsBusy = false;
                     ButtonNotBusy = true;
@@ -149,8 +153,8 @@ namespace Parkville.ViewModels
         }
         public bool SignUpVerification()
         {
-            bool verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password) || string.IsNullOrEmpty(_ConfirmPassword) || _ConfirmPassword != _Password ||
-                Phonenumber.Length < 10);
+            bool verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password) || string.IsNullOrEmpty(_ConfirmPassword));
+                
             return verification;
         }
         public bool LoginVerification()

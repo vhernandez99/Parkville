@@ -70,6 +70,14 @@
                     FontSize="Medium"
                     CornerRadius="25" 
                     Clicked="BtnCall3_Clicked"/>
+            <Label Margin="20"
+                   Text="Desarrollador de aplicacion"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+            <Label Margin="20"
+                   Text="Correo: vhernandez.99@hotmail.com"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
