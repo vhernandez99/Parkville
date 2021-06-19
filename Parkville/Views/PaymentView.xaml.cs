@@ -31,7 +31,7 @@ namespace Parkville.Views
             await Navigation.PopModalAsync();
 
         }
-
+        //borrar
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
             CrossClipboard.Current.SetText(cardNum.Text);
