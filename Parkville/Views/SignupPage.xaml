@@ -8,62 +8,53 @@
              mc:Ignorable="d"
              x:Class=" Parkville.Views.SignupPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="AliceBlue">
-             
-             
-             
+             BackgroundColor="AliceBlue"
+             >
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
-            <Image Source="fondorojo" Aspect="AspectFill"></Image>
-            <Grid RowDefinitions="4*,1.5*,1.5*,1.5*,1.5*,1.5*,1.5*,1.5*,*" ColumnDefinitions="*" RowSpacing="15" Margin="10" >
-                <Frame Grid.Row="0" Padding="0" BackgroundColor="Transparent">
+            <Image Source="fondo.jpg" Aspect="AspectFill"></Image>
+            <Grid RowDefinitions="4*,1.5*,1.5*,1.5*,1.5*,1.5*,1.5*,1.5*,*" ColumnDefinitions="0.5*, 0.5*" RowSpacing="15" Margin="10" >
+                <Frame Grid.Row="0" Grid.ColumnSpan="2" Padding="0" BackgroundColor="Transparent">
                     <Image Source="letras.png" Grid.Row="0"/>
                 </Frame>
-                
-                <Frame Grid.Row="1" BackgroundColor="WhiteSmoke" Padding="0">
-                    <StackLayout Padding="5" Spacing="0">
-                        <Label Text="Nombre completo" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
-                        <Renderers:BorderlessEntry TextColor="Black" Margin="-3,-7,0,0" Text="{Binding Username}"/>
-                    </StackLayout>
+                <Frame Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="WhiteSmoke" Padding="0">
+                    <Grid>
+                        <Renderers:BorderlessEntry VerticalOptions="CenterAndExpand" PlaceholderColor="Black" Placeholder="Nombre completo" TextColor="Black" Text="{Binding Username}"/>
+                    </Grid>
                 </Frame>
-
-                <Frame Grid.Row="2" BackgroundColor="WhiteSmoke" Padding="0">
-                    <StackLayout Padding="5" Spacing="0">
-                        <Label Text="Numero de telefono (10 digitos)" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
-                        <Renderers:BorderlessEntry TextColor="Black" Keyboard="Numeric" Margin="-3,-7,0,0" Text="{Binding Phonenumber}"/>
-                    </StackLayout>
+                <Frame Grid.ColumnSpan="2" Grid.Row="2" BackgroundColor="WhiteSmoke" Padding="0">
+                    <Grid>
+                        <Renderers:BorderlessEntry Placeholder="Numero de telefono (10 digitos)" PlaceholderColor="Black" TextColor="Black" Keyboard="Numeric" Text="{Binding Phonenumber}"/>
+                    </Grid>
                 </Frame>
-                <Frame Grid.Row="3" BackgroundColor="WhiteSmoke" Padding="0">
-                    <StackLayout Padding="5" Spacing="0">
-                        <Label Text="Nombre de usuario" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
-                        <Renderers:BorderlessEntry TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" Margin="-3,-7,0,0"
+                <Frame Grid.ColumnSpan="2" Grid.Row="3" BackgroundColor="WhiteSmoke" Padding="0">
+                    <Grid>
+                        <Renderers:BorderlessEntry Placeholder="Correo electronico" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" 
                                      Text="{Binding Email}"/>
-                    </StackLayout>
+                    </Grid>
                 </Frame>
-                <Frame Grid.Row="4" BackgroundColor="WhiteSmoke" Padding="0">
-                    <StackLayout Padding="5" Spacing="0">
-                        <Label Text="Contraseña" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
-                        <Renderers:BorderlessEntry IsPassword="True" TextColor="Black" BackgroundColor="Transparent" Text="{Binding Password}" Margin="-3,-7,0,0"/>
-                    </StackLayout>
+                <Frame Grid.ColumnSpan="2" Grid.Row="4" BackgroundColor="WhiteSmoke" Padding="0">
+                    <Grid>
+                        <Renderers:BorderlessEntry PlaceholderColor="Black" Placeholder="Contraseña" IsPassword="True" TextColor="Black" BackgroundColor="Transparent" Text="{Binding Password}" />
+                    </Grid>
                 </Frame>
-                <Frame Grid.Row="5" BackgroundColor="WhiteSmoke" Padding="0">
-                    <StackLayout Padding="5" Spacing="0">
-                        <Label Text="Confirmar Contraseña" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
-                        <Renderers:BorderlessEntry IsPassword="True" TextColor="Black" BackgroundColor="Transparent" Text="{Binding ConfirmPassword}" Margin="-3,-7,0,0"/>
-                    </StackLayout>
+                <Frame Grid.ColumnSpan="2" Grid.Row="5" BackgroundColor="WhiteSmoke" Padding="0">
+                    <Grid>
+                        <Renderers:BorderlessEntry Placeholder="Confirmar Contraseña" PlaceholderColor="Black" IsPassword="True" TextColor="Black" BackgroundColor="Transparent" Text="{Binding ConfirmPassword}"/>
+                    </Grid>
                 </Frame>
                 <ActivityIndicator x:Name="Indicator" Color="Red" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
                 <Label Grid.Row="6" Text="Ya tienes una cuenta?" TextColor="White" FontSize="Subtitle" />
-                <Label Grid.Row="6" HorizontalOptions="CenterAndExpand" Margin="20,0,0,0" Text="Clic aqui" FontSize="Subtitle" TextDecorations="Underline" TextColor="White">
+                <Label Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand" Margin="20,0,0,0" Text="Clic aqui" FontSize="Subtitle" TextDecorations="Underline" TextColor="White">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding GoToLoginPage}" />
                     </Label.GestureRecognizers>
                 </Label>
-                <Button Grid.Row="7" Text="Crear cuenta" Margin="0,0,0,0" Command="{Binding SignupCommand}" WidthRequest="250" HeightRequest="40" 
-                    HorizontalOptions="CenterAndExpand" BorderWidth="50" BackgroundColor="#5DBF4E" VerticalOptions="Center" IsEnabled="{Binding ButtonNotBusy }"/>
+                <Button Grid.Row="7" Grid.ColumnSpan="2" Text="Crear cuenta" Margin="0,0,0,0" Command="{Binding SignupCommand}" 
+                    HorizontalOptions="FillAndExpand" BorderWidth="50" BackgroundColor="#5DBF4E" VerticalOptions="Center" IsEnabled="{Binding ButtonNotBusy }"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

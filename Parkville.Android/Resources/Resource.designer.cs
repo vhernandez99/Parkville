@@ -17852,10 +17852,10 @@ namespace Parkville.Droid
 			public const int exo_notification_stop = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int fondopapita = 2131165365;
+			public const int fondo = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int fondorojo = 2131165366;
+			public const int fondopapita = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
 			public const int googleg_disabled_color_18 = 2131165367;
@@ -19285,13 +19285,16 @@ namespace Parkville.Droid
 		{
 			
 			// aapt resource value: 0x7F0C0000
-			public const int icon = 2131492864;
+			public const int fondo = 2131492864;
 			
 			// aapt resource value: 0x7F0C0001
-			public const int icon_round = 2131492865;
+			public const int icon = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int launcher_foreground = 2131492866;
+			public const int icon_round = 2131492866;
+			
+			// aapt resource value: 0x7F0C0003
+			public const int launcher_foreground = 2131492867;
 			
 			static Mipmap()
 			{
