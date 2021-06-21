@@ -1,6 +1,5 @@
-﻿using Parkville.Models;
-using Newtonsoft.Json;
-using System;
+﻿using Newtonsoft.Json;
+using Parkville.Models;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -13,15 +12,15 @@ namespace Parkville.Services
 {
     public static class ApiService
     {
-        public static async Task<bool> RegisterUser(string name, string email, string password,string phoneNumber,string tokenFirebase)
+        public static async Task<bool> RegisterUser(string name, string email, string password, string phoneNumber, string tokenFirebase)
         {
             var register = new Register()
             {
                 Name = name,
                 Email = email,
                 Password = password,
-                PhoneNumber=phoneNumber,
-                TokenFirebase= tokenFirebase
+                PhoneNumber = phoneNumber,
+                TokenFirebase = tokenFirebase
             };
             var httpClient = new HttpClient();
             var jsonRegister = JsonConvert.SerializeObject(register);
@@ -30,8 +29,6 @@ namespace Parkville.Services
             if (!ApiResponse.IsSuccessStatusCode) return false;
             return true;
         }
-        
-
         public static async Task<bool> Login(string email, string password)
         {
             var login = new Login()
@@ -83,7 +80,7 @@ namespace Parkville.Services
             await TokenValidator.CheckTokenValidity();
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
-            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/movies/FindMovies?movieName="+movieName);
+            var response = await httpClient.GetStringAsync(AppSettings.ApiUrl + "api/movies/FindMovies?movieName=" + movieName);
             return JsonConvert.DeserializeObject<List<FindMovie>>(response);
         }
         public static async Task<bool> ReserveMovieTicket(Reservation reservation)
@@ -119,15 +116,15 @@ namespace Parkville.Services
     {
         public static async Task CheckTokenValidity()
         {
-            var expirationTime=Preferences.Get("tokenExpiration", 0);
+            var expirationTime = Preferences.Get("tokenExpiration", 0);
             Preferences.Set("currentTime", UnixTime.GetCurrentTime());
             var currentTime = Preferences.Get("currentTime", 0);
             if (expirationTime < currentTime)
             {
-                var email=Preferences.Get("email", string.Empty);
+                var email = Preferences.Get("email", string.Empty);
                 var password = Preferences.Get("password", string.Empty);
-                await ApiService.Login(email,password);
+                await ApiService.Login(email, password);
             }
         }
     }
-}   
+}

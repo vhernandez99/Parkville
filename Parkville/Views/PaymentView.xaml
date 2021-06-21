@@ -5,7 +5,7 @@
              BackgroundColor="#BF0000"
              >
     <ContentPage.Content>
-        <Grid RowDefinitions="Auto,Auto,0.4*,Auto,0.6*" BackgroundColor="#BF0000">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,*" BackgroundColor="#BF0000">
             <Image Source="backarrowicon" WidthRequest="30" HeightRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10" Grid.Row="0">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
@@ -14,7 +14,7 @@
             <Label Grid.Row="0" Text="Realizar pago" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
             <Label Grid.Row="1" Text="Realizar transferencia electronica o en oxxo, mandar comprobante de pago dandole click al boton verde" Margin="20" TextColor="White" FontSize="Medium"></Label>
             <Frame Margin="20" Grid.Row="2" Padding="10" CornerRadius="10" >
-                <StackLayout Grid.Row="1" BackgroundColor="White">
+                <StackLayout BackgroundColor="White">
                     <Label Text="Banco" TextColor="Black"/>
                     <Label Text="Santander" TextColor="Black"/>
                     <Label Text="Numero de tarjeta" TextColor="Black"/>
@@ -26,12 +26,11 @@
                             </Image.GestureRecognizers>
                         </Image>
                     </StackLayout>
-                    
                     <Label Text="Nombre" TextColor="Black"/>
                     <Label Text="Jaime De Leon" TextColor="Black"/>
                 </StackLayout>
             </Frame>
-            <Button Grid.Row="3" Text="Enviar comprobante de pago" Margin="20" CornerRadius="10" BackgroundColor="#00D620" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="3" Text="Enviar comprobante de pago" Margin="20" CornerRadius="10" BackgroundColor="#4bb649" Clicked="Button_Clicked"></Button>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

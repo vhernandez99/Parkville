@@ -174,7 +174,7 @@
                                TextColor="black"
                                FontSize="Body"
                                HorizontalTextAlignment="Center"/>
-                        <Button Margin="0,30,0,0" Clicked="ImgBookTicket_Tapped" BackgroundColor="#00D620" Text="Comprar boleto">
+                        <Button Margin="0,30,0,0" Clicked="ImgBookTicket_Tapped" BackgroundColor="#4bb649" Text="Comprar boleto">
                         </Button>
                     </StackLayout>
                 </Frame>

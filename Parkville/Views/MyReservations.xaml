@@ -93,8 +93,8 @@
                                        Text="{Binding IsPaid }"/>
                                 
                             <Grid ColumnDefinitions="0.5*,0.5*" RowDefinitions="Auto" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
-                                <Button Grid.Row="0" Grid.Column="0" Text="Pagar mi reserva" x:Name="Pagar" Clicked="Pagar_Clicked" Background="#00D620"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="Generar QR" x:Name="QR" Background="#00D620" TextColor="White" 
+                                <Button Grid.Row="0" TextColor="White" Grid.Column="0" Text="Pagar mi reserva" x:Name="Pagar" Clicked="Pagar_Clicked" Background="#4bb649"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Generar QR" x:Name="QR" Background="#4bb649" TextColor="White" 
                                            FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                             </Grid>
                         </Grid>

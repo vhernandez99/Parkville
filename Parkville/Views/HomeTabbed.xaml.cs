@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+
 using Xamarin.Forms.Xaml;
 
 namespace Parkville.Views
@@ -12,9 +13,11 @@ namespace Parkville.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeTabbed : TabbedPage
     {
+
         public HomeTabbed()
         {
             InitializeComponent();
+
             Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(this, false);
         }
     }

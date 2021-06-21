@@ -68,10 +68,10 @@ namespace Parkville.Views
             {
                 if(pickerfunciones.SelectedIndex == -1)
                 {
-                    await DisplayAlert("Alerta", "Favor de seleccionar una funcion", "Ok");
+                    await DisplayAlert("", "Favor de seleccionar una función", "Ok");
                     return;
                 }
-                bool result = await DisplayAlert("Alerta", "Realmente desea comprar un boleto?", "Si", "No");
+                bool result = await DisplayAlert("", "¿Realmente desea comprar un boleto?", "Si", "No");
                 if (result)
                 {
                     Reservation reservation = new Reservation
@@ -87,12 +87,12 @@ namespace Parkville.Views
                     bool response = await ApiService.ReserveMovieTicket(reservation);
                     if (response)
                     {
-                        await DisplayAlert("", "Tu ticket ha sido reservado, favor de pagar", "Ok");
+                        await DisplayAlert("", "Tu boleto ha sido reservado, favor de pagar", "Ok");
                         await Navigation.PushModalAsync(new PaymentView());
                     }
                     else
                     {
-                        await DisplayAlert("Error", "Algo salio mal", "Cancel");
+                        await DisplayAlert("", "Algo salio mal", "Intentar de nuevo");
                     }
                 }
                 else

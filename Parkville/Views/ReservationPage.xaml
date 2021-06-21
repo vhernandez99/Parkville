@@ -8,115 +8,116 @@
              mc:Ignorable="d"
              BackgroundColor="WhiteSmoke">
     <ContentPage.Content>
-        
-        <StackLayout Margin="0">
-            <Frame Padding="0" BackgroundColor="#BF0000" Margin="0">
-                <Grid  Padding="0" Margin="0">
+        <ScrollView>
+            <StackLayout Margin="0">
+                <Frame Padding="0" BackgroundColor="#BF0000" Margin="0">
+                    <Grid  Padding="0" Margin="0">
 
-                    <Image Source="backarrowicon" WidthRequest="30" HeightRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10" Grid.Row="0">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                        </Image.GestureRecognizers>
-                    </Image>
+                        <Image Source="backarrowicon" WidthRequest="30" HeightRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10" Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
 
-                    <Label Grid.Row="0" Text="Comprar boleto" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Title" 
+                        <Label Grid.Row="0" Text="Comprar boleto" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Title" 
                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"/>
-                </Grid>
-            </Frame>
+                    </Grid>
+                </Frame>
 
-            <StackLayout Margin="20">
-            <Grid Margin="0,15,0,0"
+                <StackLayout Margin="20">
+                    <Grid Margin="0,15,0,0"
                   HeightRequest="250">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="25" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4.5*" />
-                    <ColumnDefinition Width="5.5*" />
-                </Grid.ColumnDefinitions>
-                <Frame Padding="20"
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4.5*" />
+                            <ColumnDefinition Width="5.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Frame Padding="20"
                        BackgroundColor="#BF0000"
                        CornerRadius="5"
                        Grid.Row="1"
                        Grid.Column="0"
                        Grid.ColumnSpan="2"></Frame>
-                <StackLayout Grid.Row="0"
+                        <StackLayout Grid.Row="0"
                              Grid.RowSpan="2"
                              Grid.Column="0"
                              Margin="10">
-                    <Frame Padding="0"
+                            <Frame Padding="0"
                            CornerRadius="10">
-                        <Image VerticalOptions="Start"
+                                <Image VerticalOptions="Start"
                                Aspect="Fill"
                                HeightRequest="200"
                                x:Name="ImgMovie"></Image>
-                    </Frame>
-                </StackLayout>
-                <StackLayout Grid.Column="1"
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1"
                              Padding="5"
                              Spacing="10"
                              Grid.Row="1">
-                    <Label x:Name="LblMovieName"
+                            <Label x:Name="LblMovieName"
                            TextColor="White" />
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                    </Grid>
-                    <StackLayout Orientation="Horizontal"
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+                            <StackLayout Orientation="Horizontal"
                                  Spacing="0"
                                  Grid.Row="0"
                                  Grid.Column="0">
-                        <Frame BackgroundColor="black" 
+                                <Frame BackgroundColor="black" 
                                            Padding="5"
                                            CornerRadius="8">
-                            <Label TextColor="White"
+                                    <Label TextColor="White"
                                                x:Name="LblGenre" HorizontalTextAlignment="Start" />
-                        </Frame>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="star.png"
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="star.png"
                                VerticalOptions="Center"
                                Aspect="Fill"
                                HeightRequest="20"
                                WidthRequest="20" />
-                        <Label x:Name="LblRating"
+                                <Label x:Name="LblRating"
                                TextColor="White" />
-                    </StackLayout>
-                    <Label x:Name="LblLanguage"
+                            </StackLayout>
+                            <Label x:Name="LblLanguage"
                            TextColor="White" />
-                    <Label x:Name="LblDuration"
+                            <Label x:Name="LblDuration"
                            TextColor="White" />
-                </StackLayout>
-            </Grid>
-            <Frame Margin="0,30,0,0"
+                        </StackLayout>
+                    </Grid>
+                    <Frame Margin="0,30,0,0"
                    CornerRadius="10"
                    HasShadow="False"
                    Padding="0"
                    IsClippedToBounds="True">
-                
-            </Frame>
-            <Frame Margin="0,30,0,0"
+
+                    </Frame>
+                    <Frame Margin="0,30,0,0"
                    CornerRadius="10"
                    HasShadow="False"
                    Padding="0"
                    IsClippedToBounds="True">
-                <StackLayout Spacing="0">
-                    <StackLayout BackgroundColor="#BF0000">
-                            <Label Text="Seleccionar horario de pelicula"
+                        <StackLayout Spacing="0">
+                            <StackLayout BackgroundColor="#BF0000">
+                                <Label Text="Seleccionar horario de pelicula"
                                TextColor="White"
                                Padding="8" />
-                    </StackLayout>
-                        <StackLayout BackgroundColor="White">
-                            <renderers:BorderlessPicker   Margin="10" x:Name="pickerfunciones" Title="Funciones disponibles" TextColor="Black">
-                                <!--SelectedIndexChanged="PickerQty_SelectedIndexChanged">
+                            </StackLayout>
+                            <StackLayout BackgroundColor="White">
+                                <renderers:BorderlessPicker   Margin="10" x:Name="pickerfunciones" Title="Funciones disponibles" TextColor="Black">
+                                    <!--SelectedIndexChanged="PickerQty_SelectedIndexChanged">
                             <renderers:BorderlessPicker.Items>
                                 <x:String>1</x:String>
-                                --><!--<x:String>2</x:String>
+                                -->
+                                    <!--<x:String>2</x:String>
                                 <x:String>3</x:String>
                                 <x:String>4</x:String>
                                 <x:String>5</x:String>
@@ -133,55 +134,59 @@
                                 <x:String>16</x:String>
                                 <x:String>17</x:String>
                                 <x:String>18</x:String>
-                                <x:String>19</x:String>--><!--
-                            </renderers:BorderlessPicker.Items>--><!--
+                                <x:String>19</x:String>-->
+                                    <!--
+                            </renderers:BorderlessPicker.Items>-->
+                                    <!--
                             <renderers:BorderlessPicker.SelectedIndex>0</renderers:BorderlessPicker.SelectedIndex>-->
-                        </renderers:BorderlessPicker>
-                    </StackLayout>
-                </StackLayout>
-            </Frame>
-            <Frame Margin="0,30,0,0"
+                                </renderers:BorderlessPicker>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Margin="0,30,0,0"
                    CornerRadius="10"
                    HasShadow="False"
                    Padding="0"
                    IsClippedToBounds="True">
-                <StackLayout Spacing="0">
-                    <StackLayout BackgroundColor="#BF0000">
-                        <Label Text="TOTAL"
+                        <StackLayout Spacing="0">
+                            <StackLayout BackgroundColor="#BF0000">
+                                <Label Text="TOTAL"
                                TextColor="White"
                                Padding="8" />
-                    </StackLayout>
-                    <StackLayout BackgroundColor="White">
-                        <Label Padding="10">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span x:Name="SpanQty"
+                            </StackLayout>
+                            <StackLayout BackgroundColor="White">
+                                <Label Padding="10">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span x:Name="SpanQty"
                                           CharacterSpacing="2"
                                           TextColor="Black"
                                           Text="1" />
-                                    <Span TextColor="Black"
+                                            <Span TextColor="Black"
                                           CharacterSpacing="2"
                                           Text="*" />
-                                    <Span x:Name="SpanPrice"
+                                            <Span x:Name="SpanPrice"
                                           TextColor="Black"
                                           CharacterSpacing="2" />
-                                    <Span TextColor="Black"
+                                            <Span TextColor="Black"
                                           CharacterSpacing="2"
                                           Text="=" />
-                                    <Span TextColor="#F38914"
+                                            <Span TextColor="#F38914"
                                           CharacterSpacing="2"
                                           Text="$" />
-                                    <Span x:Name="SpanTotalPrice"
+                                            <Span x:Name="SpanTotalPrice"
                                           TextColor="#F38914"
                                           CharacterSpacing="2" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Button Margin="0,30,0,0" Clicked="ImgReserve_Tapped" BackgroundColor="#BF0000" Text="Comprar" TextColor="White"/>
                 </StackLayout>
-            </Frame>
-            <Button Margin="0,30,0,0" Clicked="ImgReserve_Tapped" BackgroundColor="#BF0000" Text="Comprar"/>
-        </StackLayout>
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

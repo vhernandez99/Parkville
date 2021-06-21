@@ -27,12 +27,12 @@
                 </Frame>
                 <Frame Grid.ColumnSpan="2" Grid.Row="2" BackgroundColor="WhiteSmoke" Padding="0">
                     <Grid>
-                        <Renderers:BorderlessEntry Placeholder="Numero de telefono (10 digitos)" PlaceholderColor="Black" TextColor="Black" Keyboard="Numeric" Text="{Binding Phonenumber}"/>
+                        <Renderers:BorderlessEntry Placeholder="Número de teléfono (10 digitos)" PlaceholderColor="Black" TextColor="Black" Keyboard="Numeric" Text="{Binding Phonenumber}"/>
                     </Grid>
                 </Frame>
                 <Frame Grid.ColumnSpan="2" Grid.Row="3" BackgroundColor="WhiteSmoke" Padding="0">
                     <Grid>
-                        <Renderers:BorderlessEntry Placeholder="Correo electronico" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" 
+                        <Renderers:BorderlessEntry Placeholder="Correo electrónico" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent" 
                                      Text="{Binding Email}"/>
                     </Grid>
                 </Frame>
@@ -47,8 +47,8 @@
                     </Grid>
                 </Frame>
                 <ActivityIndicator x:Name="Indicator" Color="Red" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
-                <Label Grid.Row="6" Text="Ya tienes una cuenta?" TextColor="White" FontSize="Subtitle" />
-                <Label Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand" Margin="20,0,0,0" Text="Clic aqui" FontSize="Subtitle" TextDecorations="Underline" TextColor="White">
+                <Label Grid.Row="6" Text="¿Ya tienes una cuenta?" TextColor="White" FontSize="Subtitle" />
+                <Label Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand" Margin="20,0,0,0" Text="Clic aquí" FontSize="Subtitle" TextDecorations="Underline" TextColor="White">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding GoToLoginPage}" />
                     </Label.GestureRecognizers>

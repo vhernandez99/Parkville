@@ -111,6 +111,8 @@ namespace Parkville.ViewModels
             if(Password!= ConfirmPassword)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Las contraseñas no coinciden", "Aceptar");
+                ButtonNotBusy = true;
+                return;
             }
 
             if (SignUpVerification())

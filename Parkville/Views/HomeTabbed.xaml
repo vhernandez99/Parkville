@@ -5,32 +5,29 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
             xmlns:View="clr-namespace:Parkville.Views"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            
-            BarBackground="#BF0000"
-            BarTextColor="WhiteSmoke"
-            SelectedTabColor="#00D620"
-            UnselectedTabColor="WhiteSmoke"
-            BarBackgroundColor="#BF0000"
-            
-            
+            SelectedTabColor="#BF0000"
+            BarBackground="WhiteSmoke"
+            BarTextColor="WhiteSmoke" 
+            BarBackgroundColor="WhiteSmoke"
+
             >
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
-        <NavigationPage IconImageSource="claqueta" Title="Peliculas" BarTextColor="Gray">
+        <NavigationPage IconImageSource="claqueta"  >
             <x:Arguments>
                 <View:HomePage>
                 </View:HomePage>
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
-    <NavigationPage IconImageSource="maps" Title="Ubicacion" >
+    <NavigationPage IconImageSource="maps" >
         <x:Arguments>
             <View:Ubicacion>
             </View:Ubicacion>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage IconImageSource="usuario" Title="Perfil" >
+    <NavigationPage IconImageSource="usuario" >
         <x:Arguments>
             <View:Perfil>
             </View:Perfil>
