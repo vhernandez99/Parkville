@@ -28,24 +28,23 @@ namespace Parkville.Views
             movieId = movie.Id;
 
             List<string> funcionesList = new List<string>();
-
-            if (movie.PlayingDate.ToString() != "0001-01-01 00:00:00.0000000")
+            if (movie.PlayingDate.ToString() != "1/1/1900 12:00:00 AM")
             {
                 funcionesList.Add(movie.PlayingDate.ToString("dd/MM/yyyy") + " " + movie.PlayingTime.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate2.ToString() != "0001-01-01 00:00:00.0000000")
+            if (movie.PlayingDate2.ToString() != "1/1/1900 12:00:00 AM")
             {
                 funcionesList.Add(movie.PlayingDate2.ToString("dd/MM/yyyy") + " " + movie.PlayingTime2.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate3.ToString() != "1/1/0001 12:00:00 AM")
+            if (movie.PlayingDate3.ToString() != "1/1/1900 12:00:00 AM")
             {
                 funcionesList.Add(movie.PlayingDate3.ToString("dd/MM/yyyy") + " " + movie.PlayingTime3.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate4.ToString() != "1/1/0001 12:00:00 AM")
+            if (movie.PlayingDate4.ToString() != "1/1/1900 12:00:00 AM")
             {
                 funcionesList.Add(movie.PlayingDate4.ToString("dd/MM/yyyy") + " " + movie.PlayingTime4.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate5.ToString() != "1/1/0001 12:00:00 AM")
+            if (movie.PlayingDate5.ToString() != "1/1/1900 12:00:00 AM")
             {
                 funcionesList.Add(movie.PlayingDate5.ToString("dd/MM/yyyy") + " " + movie.PlayingTime5.ToString("hh:mm tt"));
             }

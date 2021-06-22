@@ -100,7 +100,6 @@ namespace Parkville.ViewModels
             GoToLoginPage = new Command(async () => await UIViewModel.GoToLoginPageAsync());
             GoToSignupPage = new Command(async () => await UIViewModel.GoToSignupPageAsync());
         }
-
         private async Task SignupCommandAsync()
         {
             ButtonNotBusy = false;
@@ -108,7 +107,7 @@ namespace Parkville.ViewModels
             {
                 return;
             }
-            if(Password!= ConfirmPassword)
+            if (Password != ConfirmPassword)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Las contraseñas no coinciden", "Aceptar");
                 ButtonNotBusy = true;
@@ -155,19 +154,18 @@ namespace Parkville.ViewModels
         }
         public bool SignUpVerification()
         {
-            bool verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password) || string.IsNullOrEmpty(_ConfirmPassword));
-                
+            bool verification = string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password) || string.IsNullOrEmpty(_ConfirmPassword);
+
             return verification;
         }
         public bool LoginVerification()
         {
-            bool verification = (string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password));
+            bool verification = string.IsNullOrEmpty(_Email) || string.IsNullOrEmpty(_Password);
             return verification;
         }
 
         private async Task LoginCommandAsync()
         {
-
             ButtonNotBusy = false;
             if (IsBusy)
             {
@@ -208,12 +206,5 @@ namespace Parkville.ViewModels
             }
 
         }
-
-
-
-
-
-
-
     }
 }

@@ -27,23 +27,23 @@ namespace Parkville.Views
             //StringFormat='{0:dd/MM/yy}'}
             LblPlayingDate.Text = movie.PlayingDate.ToString("dd/MM/yyyy");
             LblPlayingTime.Text = movie.PlayingTime.ToString("hh:mm tt");
-
-            if (movie.PlayingDate2.ToString("dd/MM/yyyy") != "01/01/0001")
+            
+            if (movie.PlayingDate2.ToString("dd/MM/yyyy") != "01/01/1900")
             {
                 LblPlayingDate2.Text = movie.PlayingDate2.ToString("dd/MM/yyyy");
                 LblPlayingTime2.Text = movie.PlayingTime2.ToString("hh:mm tt");
             }
-            if (movie.PlayingDate3.ToString("dd/MM/yyyy") != "01/01/0001")
+            if (movie.PlayingDate3.ToString("dd/MM/yyyy") != "01/01/1900")
             {
                 LblPlayingDate3.Text = movie.PlayingDate3.ToString("dd/MM/yyyy");
                 LblPlayingTime3.Text = movie.PlayingTime3.ToString("hh:mm tt");
             }
-            if (movie.PlayingDate4.ToString("dd/MM/yyyy") != "01/01/0001")
+            if (movie.PlayingDate4.ToString("dd/MM/yyyy") != "01/01/1900")
             {
                 LblPlayingDate4.Text = movie.PlayingDate4.ToString("dd/MM/yyyy");
                 LblPlayingTime4.Text = movie.PlayingTime4.ToString("hh:mm tt");
             }
-            if (movie.PlayingDate5.ToString("dd/MM/yyyy") != "01/01/0001")
+            if (movie.PlayingDate5.ToString("dd/MM/yyyy") != "01/01/1900")
             {
                 LblPlayingDate5.Text = movie.PlayingDate5.ToString("dd/MM/yyyy");
                 LblPlayingTime5.Text = movie.PlayingTime5.ToString("hh:mm tt");

@@ -8,8 +8,8 @@ namespace Parkville.ViewModels
 {
     public class HomePageViewModel : BaseViewModel
     {
-
         public ObservableCollection<Movie> MoviesCollection { get; set; }
+        public ObservableCollection<BannerImage> BannerImagesCollection { get; set; }
         public Command RefreshCommand { get; set; }
         public Command MoviesCommand { get; set; }
 
@@ -31,15 +31,57 @@ namespace Parkville.ViewModels
             RefreshCommand = new Command(ExecuteRefreshCommand);
             GetMovies();
             GetBannerImagesSource();
-
-
         }
 
-        public ObservableCollection<BannerImage> BannerImagesCollection { get; set; }
+        public async void GetBannerImagesSource()
+        {
+            List<BannerImage> ImagesBanner = await ApiService.GetAllBannerImages();
+            foreach (BannerImage ImageBanner in ImagesBanner)
+            {
+                BannerImagesCollection.Add(ImageBanner);
+            }
+            ImageSource1 = BannerImagesCollection[0].FullImageUrl;
+            ImageSource2 = BannerImagesCollection[1].FullImageUrl;
+            ImageSource3 = BannerImagesCollection[2].FullImageUrl;
+            ImageSource4 = BannerImagesCollection[3].FullImageUrl;
+            ImageSource5 = BannerImagesCollection[4].FullImageUrl;
+            ImageSource6 = BannerImagesCollection[5].FullImageUrl;
+            ImageSource7 = BannerImagesCollection[6].FullImageUrl;
+            ImageSource8 = BannerImagesCollection[7].FullImageUrl;
+            ImageSource9 = BannerImagesCollection[8].FullImageUrl;
+            ImageSource10 = BannerImagesCollection[9].FullImageUrl;
+        }
+
+        private void ExecuteRefreshCommand(object obj)
+        {
+            RefreshMovies();
+            IsRefreshing = false;
+        }
+
+        public async void GetMovies()
+        {
+            PageNumber++;
+            List<Movie> movies = await ApiService.GetAllMovies(PageNumber, 5);
+            foreach (Movie movie in movies)
+            {
+                MoviesCollection.Add(movie);
+            }
+        }
+        public async void RefreshMovies()
+        {
+            PageNumber = 0;
+            PageNumber++;
+            List<Movie> movies = await ApiService.GetAllMovies(PageNumber, 5);
+            MoviesCollection.Clear();
+            foreach (Movie movie in movies)
+            {
+                MoviesCollection.Add(movie);
+            }
+            IsRefreshing = false;
+        }
+
 
         private string _ImageSource1;
-
-
         public string ImageSource1
         {
             set
@@ -148,54 +190,5 @@ namespace Parkville.ViewModels
             }
             get => _ImageSource10;
         }
-
-
-        public async void GetBannerImagesSource()
-        {
-            List<BannerImage> ImagesBanner = await ApiService.GetAllBannerImages();
-            foreach (BannerImage ImageBanner in ImagesBanner)
-            {
-                BannerImagesCollection.Add(ImageBanner);
-            }
-            ImageSource1 = BannerImagesCollection[0].FullImageUrl;
-            ImageSource2 = BannerImagesCollection[1].FullImageUrl;
-            ImageSource3 = BannerImagesCollection[2].FullImageUrl;
-            ImageSource4 = BannerImagesCollection[3].FullImageUrl;
-            ImageSource5 = BannerImagesCollection[4].FullImageUrl;
-            ImageSource6 = BannerImagesCollection[5].FullImageUrl;
-            ImageSource7 = BannerImagesCollection[6].FullImageUrl;
-            ImageSource8 = BannerImagesCollection[7].FullImageUrl;
-            ImageSource9 = BannerImagesCollection[8].FullImageUrl;
-            ImageSource10 = BannerImagesCollection[9].FullImageUrl;
-        }
-
-        private void ExecuteRefreshCommand(object obj)
-        {
-            RefreshMovies();
-            IsRefreshing = false;
-        }
-
-        public async void GetMovies()
-        {
-            PageNumber++;
-            List<Movie> movies = await ApiService.GetAllMovies(PageNumber, 5);
-            foreach (Movie movie in movies)
-            {
-                MoviesCollection.Add(movie);
-            }
-        }
-        public async void RefreshMovies()
-        {
-            PageNumber = 0;
-            PageNumber++;
-            List<Movie> movies = await ApiService.GetAllMovies(PageNumber, 5);
-            MoviesCollection.Clear();
-            foreach (Movie movie in movies)
-            {
-                MoviesCollection.Add(movie);
-            }
-            IsRefreshing = false;
-        }
-
     }
 }
