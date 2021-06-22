@@ -17864,7 +17864,7 @@ namespace Parkville.Droid
 			public const int googleg_standard_color_18 = 2131165368;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int icon512png = 2131165372;
+			public const int icon = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
 			public const int icon512x512 = 2131165373;
@@ -19285,16 +19285,13 @@ namespace Parkville.Droid
 		{
 			
 			// aapt resource value: 0x7F0C0000
-			public const int fondo = 2131492864;
+			public const int icon = 2131492864;
 			
 			// aapt resource value: 0x7F0C0001
-			public const int icon = 2131492865;
+			public const int icon_round = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int icon_round = 2131492866;
-			
-			// aapt resource value: 0x7F0C0003
-			public const int launcher_foreground = 2131492867;
+			public const int launcher_foreground = 2131492866;
 			
 			static Mipmap()
 			{

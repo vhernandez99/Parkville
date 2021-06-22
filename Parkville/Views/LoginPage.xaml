@@ -34,7 +34,7 @@
                 </Grid>
             </Frame>
 
-            <Button Grid.Row="4"  Text="Crear cuenta" Margin="0,0,0,0" Command="{Binding LoginCommand}" 
+            <Button Grid.Row="4"  Text="Iniciar sesion" Margin="0,0,0,0" Command="{Binding LoginCommand}" 
                     HorizontalOptions="FillAndExpand" BorderWidth="50" BackgroundColor="#5DBF4E" VerticalOptions="Center" IsEnabled="{Binding ButtonNotBusy }"/>
 
         </Grid>
