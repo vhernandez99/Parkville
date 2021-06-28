@@ -17972,37 +17972,31 @@ namespace Parkville.Droid
 			public const int rojo = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int search = 2131165404;
+			public const int settings = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int sesionbtn = 2131165405;
+			public const int sobre = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int settings = 2131165406;
+			public const int splashScreen = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int sobre = 2131165407;
+			public const int star = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int splashScreen = 2131165408;
+			public const int terminos = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int star = 2131165409;
+			public const int tooltip_frame_dark = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int terminos = 2131165410;
+			public const int tooltip_frame_light = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int tooltip_frame_dark = 2131165411;
+			public const int user = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int tooltip_frame_light = 2131165412;
-			
-			// aapt resource value: 0x7F0700E5
-			public const int user = 2131165413;
-			
-			// aapt resource value: 0x7F0700E6
-			public const int usuario = 2131165414;
+			public const int usuario = 2131165412;
 			
 			static Drawable()
 			{

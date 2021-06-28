@@ -17,7 +17,6 @@ namespace Parkville.Views
         public HomeTabbed()
         {
             InitializeComponent();
-
             Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(this, false);
         }
     }

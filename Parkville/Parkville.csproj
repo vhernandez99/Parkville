@@ -68,9 +68,6 @@
     <EmbeddedResource Update="Views\ReservationPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SearchMoviesPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\SignupPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
