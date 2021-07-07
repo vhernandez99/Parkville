@@ -12,9 +12,8 @@
              xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView" 
              xmlns:forms1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
              xmlns:vm="clr-namespace:Parkville.ViewModels">
-    
-    <ContentPage.Content>
 
+    <ContentPage.Content>
         <Grid RowDefinitions="Auto, Auto, Auto"   >
             <Grid RowDefinitions="Auto,Auto" Grid.Row="0" Margin="-10">
                 <!--<Frame Padding="0" Grid.Row="0" BackgroundColor="#BF0000">
