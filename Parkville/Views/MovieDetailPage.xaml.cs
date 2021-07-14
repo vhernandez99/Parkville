@@ -27,7 +27,7 @@ namespace Parkville.Views
             //StringFormat='{0:dd/MM/yy}'}
             LblPlayingDate.Text = movie.PlayingDate.ToString("dd/MM/yyyy");
             LblPlayingTime.Text = movie.PlayingTime.ToString("hh:mm tt");
-            
+
             if (movie.PlayingDate2.ToString("dd/MM/yyyy") != "01/01/1900")
             {
                 LblPlayingDate2.Text = movie.PlayingDate2.ToString("dd/MM/yyyy");

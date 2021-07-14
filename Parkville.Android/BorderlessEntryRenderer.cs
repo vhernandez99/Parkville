@@ -27,11 +27,9 @@ namespace Parkville.Droid
 
             if (e.OldElement == null)
             {
-
                 this.Control.SetBackground(null);
             }
-                //Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
-           
+                
         }
     }
 }
