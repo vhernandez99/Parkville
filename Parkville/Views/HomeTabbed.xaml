@@ -9,8 +9,9 @@
             BarBackground="WhiteSmoke"
             BarTextColor="WhiteSmoke" 
             BarBackgroundColor="WhiteSmoke"
+            NavigationPage.HasNavigationBar="False">
 
-            >
+            
     <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <NavigationPage IconImageSource="claqueta"  >

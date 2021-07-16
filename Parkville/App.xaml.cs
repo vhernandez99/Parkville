@@ -15,7 +15,7 @@ namespace Parkville
             Device.SetFlags(new string[] { "MediaElement_Experimental" });
             if ((shallNavigate || !string.IsNullOrEmpty(accessToken)))
             {
-                MainPage = new HomeTabbed();
+                MainPage = new NavigationPage(new HomeTabbed());
             }
             else
             {
