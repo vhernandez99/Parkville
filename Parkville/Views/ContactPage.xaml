@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkville.Views.ContactPage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:Parkville.Renderers"
+             mc:Ignorable="d"
+             BackgroundColor="#BF0000"
+             Title="Contactanos">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+               
+                <Label Margin="20"
+                   Text="Para mayor informacion contactanos!"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+                <Label Margin="20"
+                   Text="Whatsapp business"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+                <Button x:Name="BtnCall" 
+                    Text="Llamar 8681309225"
+                    Margin="10"
+                    BackgroundColor="#4bb649"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnCall_Clicked"/>
+                <Label Margin="20"
+                   Text="Oficina"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+                <Button x:Name="BtnCall2" 
+                    Text="Llamar 8681335196"
+                    Margin="10"
+                    BackgroundColor="#4bb649"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnCall2_Clicked"/>
+                <Label Margin="20"
+                   Text="Quejas o sugerencias"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+                <Button x:Name="BtnCall3" 
+                    Text="Llamar 8682270834"
+                    Margin="10"
+                    BackgroundColor="#4bb649"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnCall3_Clicked"/>
+                <Label
+                   Text="Desarrollador de aplicacion"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+                <Label 
+                   Text="Correo: vhernandez.99@hotmail.com"
+                   TextColor="White"
+                   FontSize="Body" HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

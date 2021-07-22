@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkville.Views.Perfil"
+             NavigationPage.HasNavigationBar="True"
+             BackgroundColor="#BF0000"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView" 
+             xmlns:controls="clr-namespace:PanCardView.Controls;assembly=PanCardView">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowDefinitions="Auto, Auto ,Auto" BackgroundColor="WhiteSmoke">
+
+                <!--<Frame Padding="0" BackgroundColor="#BF0000" Grid.Row="0">
+                    <Label x:Name="title" FontSize="Medium" TextColor="White" Padding="15"></Label>
+                </Frame>
+                <Frame Padding="0" BackgroundColor="#BF0000" Grid.Row="0" Margin="0">
+                    <Label x:Name="title"  FontSize="Medium" HorizontalTextAlignment="Start" TextColor="White" Padding="15"></Label>
+                </Frame>-->
+                <Frame Grid.Row="1" Padding="0" BackgroundColor="Transparent" Margin="-10">
+                    <Image Source="banner7.jpg" Margin="0">
+
+                    </Image>
+                </Frame>
+                <!--<Grid RowDefinitions="Auto"  Grid.Row="1">
+                    <Frame Padding="0" BackgroundColor="Transparent" Margin="0,0,0,0">
+                        <MediaElement x:Name="videoparkville" VerticalOptions="StartAndExpand" WidthRequest="200" HeightRequest="250" AutoPlay="True" 
+                                                      Source="ms-appx:///parkvilleVideo.mp4" 
+                                                      HorizontalOptions="FillAndExpand" Margin="0" ShowsPlaybackControls="True" IsLooping="False">
+                        </MediaElement>
+
+                    </Frame>
+
+                </Grid>-->
+
+                <StackLayout Grid.Row="2" Margin="10,0" Spacing="0">
+                    
+                    <StackLayout Orientation="Horizontal" Margin="10" BackgroundColor="Transparent">
+                        <Image Source="calendario" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Mis reservaciones" TextColor="Black" FontSize="Medium" Margin="10" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapReservaciones" Tapped="tapReservaciones_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    
+
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Image Source="sobre" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Sobre nosotros" TextColor="Black" FontSize="Medium" Margin="10" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapNosotros" Tapped="tapNosotros_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Image Source="contactanos" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Contactanos" TextColor="Black" FontSize="Medium" Margin="10" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapContactanos" Tapped="tapContactanos_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Image Source="preguntas" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand" />
+                        <Label Text="Preguntas frecuentes" TextColor="Black" FontSize="Medium" Margin="10" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapPreguntas" Tapped="tapPreguntas_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Image Source="privacidad" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Politica de privacidad" TextColor="Black" FontSize="Medium" Margin="10" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapPrivacidad" Tapped="tapPrivacidad_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Image Source="terminos" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Terminos y condiciones" TextColor="Black" FontSize="Medium" Margin="10" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapTerminos" Tapped="tapTerminos_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Image Source="cerrar" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Cerrar sesion" TextColor="Black" FontSize="Medium" Margin="10" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapCerrar" Tapped="tapCerrar_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

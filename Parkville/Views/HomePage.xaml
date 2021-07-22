@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                mc:Ignorable="d"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="Parkville.Views.HomePage"         
+                BackgroundColor="WhiteSmoke"
+                NavigationPage.HasNavigationBar="True"
+                xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView" 
+                xmlns:controls="clr-namespace:PanCardView.Controls;assembly=PanCardView"
+                xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView" 
+                xmlns:forms1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+                xmlns:vm="clr-namespace:Parkville.ViewModels"
+                Title="Autocinema Parkville cartelera">
+              
+    
+    <ContentPage.Content>
+        <Grid RowDefinitions="0.4*, 0.6*">
+            <Grid RowDefinitions="Auto" Grid.Row="0" Margin="-10">
+                <!--<Frame Padding="0" Grid.Row="0" BackgroundColor="#BF0000">
+                    <Label Text="Parkville Autocinema" FontSize="Medium" TextColor="White" HorizontalTextAlignment="Center" FontFamily="Lobster-Regular"/>
+                </Frame>-->
+                <!--<Frame Padding="0" BackgroundColor="#BF0000" Grid.Row="0" Margin="-10">
+                    <Label x:Name="title"  FontSize="Medium" HorizontalTextAlignment="Start" TextColor="White" Padding="15"></Label>
+                </Frame>-->
+                <!--<Frame Padding="0" BackgroundColor="#BF0000" Grid.Row="0" Margin="-10">
+                    <Label FontSize="Medium" Text="Parkville Autocinema" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                </Frame>-->
+
+                <cards:CarouselView Grid.Row="1" x:Name="bannerview" Margin="0" Padding="0">
+                    <cards:CarouselView.ItemsSource >
+                        <x:Array Type="{x:Type View}">
+                            <Grid BackgroundColor="Black">
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" >
+                                    <Image x:Name="Image1" Source="{Binding ImageSource1}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image x:Name="Image2" Source="{Binding ImageSource2}" Aspect="Fill" 
+                                   Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image x:Name="Image3" Source="{Binding ImageSource3}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image x:Name="Image4" Source="{Binding ImageSource4}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image x:Name="Image5" Source="{Binding ImageSource5}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource6}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource7}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource8}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource9}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                            <Grid>
+                                <Frame CornerRadius="0" Padding="0" HasShadow="false" BackgroundColor="White">
+                                    <Image Source="{Binding ImageSource10}" Aspect="Fill" 
+                                    Margin="0"></Image>
+                                </Frame>
+                            </Grid>
+                        </x:Array>
+                    </cards:CarouselView.ItemsSource>
+                    <controls:LeftArrowControl ToFadeDuration="1500"/>
+                    <controls:RightArrowControl ToFadeDuration="1500"/>
+                    <controls:IndicatorsControl/>
+                    <controls:CircleFrame/>
+                    
+                </cards:CarouselView>
+
+
+
+            </Grid>
+            <Grid Grid.Row="1" RowDefinitions="Auto,Auto">
+                <!--<Frame Padding="0" BackgroundColor="Transparent" Grid.Row="0" >
+                    <Label Text="Cartelera" FontSize="Title" HorizontalTextAlignment="Center" TextColor="Black" Padding="0"></Label>
+                </Frame>-->
+                <RefreshView x:Name="MoviesRefreshView" IsRefreshing="{Binding IsRefreshing}"
+                                Command="{Binding RefreshCommand}" Grid.Row="1" >
+                    <CollectionView x:Name="CvMovies" SelectionMode="Single" 
+                                RemainingItemsThreshold="1"
+                                RemainingItemsThresholdReached="CvMovies_RemainingItemsThresholdReached"
+                                SelectionChanged="CvMovies_SelectionChanged"
+                                ItemsSource="{Binding MoviesCollection}">
+                        <CollectionView.ItemsLayout  >
+                            <GridItemsLayout Span="3" 
+                                            Orientation="Vertical"  />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate >
+                            <DataTemplate>
+                                <StackLayout Margin="10">
+                                    <Frame Padding="0" WidthRequest="200" HeightRequest="200" Margin="10" CornerRadius="10" >
+                                        <Image Aspect="Fill" Source="{Binding FullImageUrl}" />
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </RefreshView>
+
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

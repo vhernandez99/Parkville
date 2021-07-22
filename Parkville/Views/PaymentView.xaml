@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkville.Views.PaymentView" 
+             BackgroundColor="#BF0000"
+             Title="Realizar pago"
+             NavigationPage.HasBackButton="False"
+             >
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" BackgroundColor="#BF0000">
+           <!-- <Image Source="backarrowicon" WidthRequest="30" HeightRequest="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10" Grid.Row="0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Row="0" Text="Realizar pago" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>-->
+            
+            <Frame Margin="20" Grid.Row="1" Padding="10" CornerRadius="10" >
+                <StackLayout BackgroundColor="White">
+                    <Label Text="Banco" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="Santander" TextColor="Black"/>
+                    <Label Text="Numero de tarjeta" FontAttributes="Bold" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="cardNum" Text="5579-0890-0247-7605" TextColor="Black"/>
+                        <Image Margin="0,-5,0,0" Source="copy" WidthRequest="25" HeightRequest="25" VerticalOptions="CenterAndExpand">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                    <Label Text="Nombre" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="Jaime De Leon" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            <Label Grid.Row="2" Text="Realizar transferencia electronica o en oxxo, mandar comprobante de pago dandole click al boton verde" Margin="20" TextColor="White" FontSize="Medium"></Label>
+            <Button Grid.Row="3" Text="Enviar comprobante de pago" TextColor="White" Margin="20" CornerRadius="10" BackgroundColor="#4bb649" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="4" Text="Regresar a pagina principal" TextColor="White" Margin="20" CornerRadius="10" BackgroundColor="#4bb649" Clicked="Button_Clicked_1"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

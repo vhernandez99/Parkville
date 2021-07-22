@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Parkville.Views.VideoPlayerPage"
+             BackgroundColor="Black"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <!--<Image Margin="15,20,15,0" Source="backicon.png" HorizontalOptions="Start" Grid.Column="0" Aspect="AspectFit"/>-->
+            <Grid RowDefinitions="Auto">
+                <xct:MediaElement x:Name="MediaElementVideo" ShowsPlaybackControls="True" WidthRequest="400" HeightRequest="400" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                <ActivityIndicator x:Name="AILoader" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" IsRunning="True" IsVisible="True" Color="White" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkville.Views.TerminosPage"
+             BackgroundColor="#BF0000">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *">
+            
+            <WebView Source="https://www.parkvilleautocinemas.com/terminos-y-condiciones/" Grid.Row="1" Margin="-10"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
