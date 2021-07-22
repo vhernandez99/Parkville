@@ -18,6 +18,6 @@ namespace Parkville.Views
             descripcionlbl.Text = "Sinopsis:" + description;
         }
 
-        
+        //
     }
 }
