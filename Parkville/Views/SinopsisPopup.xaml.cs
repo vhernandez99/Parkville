@@ -17,7 +17,7 @@ namespace Parkville.Views
             InitializeComponent();
             descripcionlbl.Text = "Sinopsis:" + description;
         }
-
+        //
         //
     }
 }

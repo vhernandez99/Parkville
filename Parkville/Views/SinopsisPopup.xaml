@@ -6,7 +6,7 @@
              Size="400,200">
     <StackLayout>
         <ScrollView>
-        <Label TextColor="Black" x:Name="descripcionlbl" FontSize="Medium" ></Label>
+            <Label TextColor="Black" x:Name="descripcionlbl" FontSize="Medium" ></Label>
         </ScrollView>
     </StackLayout>
 </xct:Popup>
