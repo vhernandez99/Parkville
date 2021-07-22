@@ -37,23 +37,24 @@ namespace Parkville.Views
             ////LblPlayingDate.Text = movie.PlayingDate.ToString("dd/MM/yyyy");
             ////LblPlayingTime.Text = movie.PlayingTime.ToString("hh:mm tt");
             List<string> funcionesList = new List<string>();
-            if (movie.PlayingDate.ToString() != "1/1/1900 12:00:00 AM")
+            if (!movie.PlayingDate.ToString().Contains( "1900"))
             {
                 funcionesList.Add(movie.PlayingDate.ToString("dd/MM/yyyy") + " " + movie.PlayingTime.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate2.ToString() != "1/1/1900 12:00:00 AM")
+            var d2 = movie.PlayingDate2.ToString(); 
+            if (!movie.PlayingDate2.ToString().Contains("1900"))
             {
                 funcionesList.Add(movie.PlayingDate2.ToString("dd/MM/yyyy") + " " + movie.PlayingTime2.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate3.ToString() != "1/1/1900 12:00:00 AM")
+            if (!movie.PlayingDate3.ToString().Contains("1900"))
             {
                 funcionesList.Add(movie.PlayingDate3.ToString("dd/MM/yyyy") + " " + movie.PlayingTime3.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate4.ToString() != "1/1/1900 12:00:00 AM")
+            if (!movie.PlayingDate4.ToString().Contains("1900"))
             {
                 funcionesList.Add(movie.PlayingDate4.ToString("dd/MM/yyyy") + " " + movie.PlayingTime4.ToString("hh:mm tt"));
             }
-            if (movie.PlayingDate5.ToString() != "1/1/1900 12:00:00 AM")
+            if (!movie.PlayingDate5.ToString().Contains("1900"))
             {
                 funcionesList.Add(movie.PlayingDate5.ToString("dd/MM/yyyy") + " " + movie.PlayingTime5.ToString("hh:mm tt"));
             }
