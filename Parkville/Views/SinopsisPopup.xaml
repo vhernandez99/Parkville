@@ -5,7 +5,8 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Size="400,200">
     <StackLayout>
+        <ScrollView>
         <Label TextColor="Black" x:Name="descripcionlbl" FontSize="Medium" ></Label>
-        
+        </ScrollView>
     </StackLayout>
 </xct:Popup>
