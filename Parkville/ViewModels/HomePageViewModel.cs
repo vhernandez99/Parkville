@@ -13,7 +13,7 @@ namespace Parkville.ViewModels
         public ObservableCollection<BannerImage> BannerImagesCollection { get; set; }
         public Command RefreshCommand { get; set; }
         public Command MoviesCommand { get; set; }
-
+        //comentario borrar
         private int PageNumber = 0;
         private bool _isRefreshing;
         public bool IsRefreshing
